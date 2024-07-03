@@ -1,0 +1,105 @@
+@font-face {
+        font-family: "Text" ;
+        src: url(Resources/MYRIADPRO-REGULAR.OTF);
+}
+@font-face {
+        font-family: "Tittles" ;
+        src: url(Resources/Resotho-Extralight.otf);
+}
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+.Navb{
+        background-color: #333D29;
+        font-size: 25px;
+        font-family: "Text";
+        letter-spacing: 4px;
+}
+.Banner{
+        position: relative;
+
+}
+.BannerImage{
+        background-image: url(Resources/BannerPrincipal.jpg);
+        background-size: cover;
+        background-position: center;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+        width: 100%;
+        
+}
+.BannerTitleAnimated{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        font-family: "Tittles";
+        height: 90vh;
+        width: 90vh;
+        color: #FFFFFF;
+}
+
+
+.BannerTitleAnimated > div {
+        height: 50%;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        }
+.BannerTitleAnimated > div div {
+        font-size: 3vmin;
+        padding: 2vmin 0;
+        position: absolute;
+      }
+.BannerTitleAnimated > div div span {
+        display: block;
+      }
+.BannerTitleAnimated > div.text-top {
+        border-bottom: 0.7vmin solid #FFFFFF;
+        top: 0;
+      }
+.BannerTitleAnimated > div.text-top div {
+        animation: showTopText 1s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        bottom: 0;
+        transform: translate(0, 100%);
+        text-align: center;
+        left: 10%;
+        letter-spacing: 20px;
+        font-weight: bolder;
+      }
+.BannerTitleAnimated > div.text-top div span:first-child {
+        color: #FFFFFF;
+      }
+.BannerTitleAnimated > div.text-bottom {
+        bottom: 0;
+      }
+.BannerTitleAnimated > div.text-bottom div {
+        animation: showBottomText 0.5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        top: 0;
+        transform: translate(0, -100%);
+        font-size: 2.15vmin;
+        font-family: Text;
+        font-weight: 30;
+        text-align: center;
+}
+.Servicios{
+        background-color: #F5F5F5;;
+}
+.Cards{
+        position: absolute;
+        margin-top: 2rem;
+        
+}
+
+
