@@ -4,13 +4,50 @@
         font-weight: bolder;
         src:url(/Habital/Website/fonts/MYRIADPRO-REGULAR.woff);
 }
-
-
 @font-face {
         font-family: 'Servicios-Text';
         src: url(/Habital/Website/fonts/GeneralSans-Light.woff);
 }
+@font-face {
+        font-family: "Titles";
+        src: url(/Habital/Website/fonts/NeueMontreal-Bold.woff);
+}
+body{
+        font-family: 'Servicios-Text';
+}
+h1,h2,h3{
+        font-family: "Titles";
 
+}
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 7em; /* Tamaño más pequeño para tablets y pantallas medianas */
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 5em; /* Tamaño para dispositivos móviles en orientación horizontal */
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3em; /* Tamaño para dispositivos móviles en orientación vertical */
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
 
 @keyframes showTopText {
   0% { transform: translate3d(0, 100%, 0); }
@@ -22,9 +59,14 @@
   0% { transform: translate3d(0, -100%, 0); }
   100% { transform: translate3d(0, 0, 0); }
 }
+img{
+        height: auto;
+        max-width: 100%;
+}
+
 .Navb{
         background-color: #333D29;
-        font-size: 25px;
+        font-size: 2vh;
         font-family: "Nav-Banner";
         letter-spacing: 4px;
 }
@@ -60,8 +102,7 @@
         width: 100%;
         }
 .BannerTitleAnimated > div div {
-        font-size: 3vmin;
-        padding: 2vmin 0;
+        padding: 1vmin 0;
         position: absolute;
       }
 .BannerTitleAnimated > div div span {
@@ -70,7 +111,7 @@
 .BannerTitleAnimated > div.text-top {
         display: flex;
         justify-content: center;
-        border-bottom: 0.7vmin solid #FFFFFF;
+        border-bottom: 0.4vmin solid #FFFFFF;
         top: 0;
       }
 .BannerTitleAnimated > div.text-top div {
@@ -82,7 +123,7 @@
         text-align: center;
         font-size: 8.1vmin;
         letter-spacing: 5px;
-        font-family: "Nav-Banner";
+        font-family: "Titles";
         color: #FFFFFF;
       }
 .BannerTitleAnimated > div.text-top div span:first-child {
@@ -102,10 +143,11 @@
         animation-fill-mode: forwards;
         top: 0;
         transform: translate(0, -100%);
-        font-size: 2.1vmin;
+        font-size: 2vmin;
         text-align: center;
         font-family: "Servicios-Text";
         color: #FFFFFF;
+        letter-spacing: 2px;
 ;
       
 }
@@ -148,5 +190,40 @@
         filter: drop-shadow(0 0 4px rgba(0,0,0,0.8));
         width: 65%;
 }
+.NosotrosTittle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+#usText p{
+        display: flex;
+        justify-items: flex-start;
+        font-family: "Servicios-Text";
+        font-size: 1.1em;
+        
+}
+#usImage{
+        height: 50%;
+        width: 70%;
+}
 
-
+#whyusText{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        transform: translateY(-50px);
+}
+#whyusText h1{ 
+       display: flex;
+       position: relative;
+       font-family: "Titles";
+       font-size: 9em;
+}
+#whyusText p{
+        display: flex;
+        justify-items: flex-start;
+        font-family: "Servicios-Text";
+        font-size: 1.3em;
+        padding-top: 7vh;
+}
