@@ -1,11 +1,17 @@
+/*Importamos fuentes*/
 @font-face {
-        font-family: "Text" ;
-        src: url(Resources/MYRIADPRO-REGULAR.OTF);
+        font-family: "Nav-Banner";
+        font-weight: bolder;
+        src:url(/Habital/Website/fonts/MYRIADPRO-REGULAR.woff);
 }
+
+
 @font-face {
-        font-family: "Tittles" ;
-        src: url(Resources/Resotho-Extralight.otf);
+        font-family: 'Servicios-Text';
+        src: url(/Habital/Website/fonts/GeneralSans-Light.woff);
 }
+
+
 @keyframes showTopText {
   0% { transform: translate3d(0, 100%, 0); }
   40%, 60% { transform: translate3d(0, 50%, 0); }
@@ -19,7 +25,7 @@
 .Navb{
         background-color: #333D29;
         font-size: 25px;
-        font-family: "Text";
+        font-family: "Nav-Banner";
         letter-spacing: 4px;
 }
 .Banner{
@@ -27,12 +33,13 @@
 
 }
 .BannerImage{
-        background-image: url(Resources/BannerPrincipal.jpg);
+        
         background-size: cover;
         background-position: center;
         filter: blur(4px);
         -webkit-filter: blur(4px);
         width: 100%;
+        height: 100vh;
         
 }
 .BannerTitleAnimated{
@@ -40,7 +47,6 @@
         top: 50%;
         left:50%;
         transform: translate(-50%, -50%);
-        font-family: "Tittles";
         height: 90vh;
         width: 90vh;
         color: #FFFFFF;
@@ -62,25 +68,33 @@
         display: block;
       }
 .BannerTitleAnimated > div.text-top {
+        display: flex;
+        justify-content: center;
         border-bottom: 0.7vmin solid #FFFFFF;
         top: 0;
       }
 .BannerTitleAnimated > div.text-top div {
         animation: showTopText 1s;
-        animation-delay: 0.5s;
+        animation-delay: 0.3s;
         animation-fill-mode: forwards;
         bottom: 0;
         transform: translate(0, 100%);
         text-align: center;
-        left: 10%;
-        letter-spacing: 20px;
-        font-weight: bolder;
+        font-size: 8.1vmin;
+        letter-spacing: 5px;
+        font-family: "Nav-Banner";
+        color: #FFFFFF;
       }
 .BannerTitleAnimated > div.text-top div span:first-child {
+        display: flex;
+        justify-content: center;
         color: #FFFFFF;
       }
 .BannerTitleAnimated > div.text-bottom {
+        display: flex;
+        justify-content: center;
         bottom: 0;
+        
       }
 .BannerTitleAnimated > div.text-bottom div {
         animation: showBottomText 0.5s;
@@ -88,18 +102,51 @@
         animation-fill-mode: forwards;
         top: 0;
         transform: translate(0, -100%);
-        font-size: 2.15vmin;
-        font-family: Text;
-        font-weight: 30;
+        font-size: 2.1vmin;
         text-align: center;
+        font-family: "Servicios-Text";
+        color: #FFFFFF;
+;
+      
 }
-.Servicios{
-        background-color: #F5F5F5;;
+#servicios{
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: center;
+       
 }
-.Cards{
-        position: absolute;
-        margin-top: 2rem;
+#servicios h1{
+        font-family: "Servicios-Title";
+        font-weight: bolder;
+        font-size: 3em;
+        letter-spacing: 5px;
+        padding-top: 30px;
+        color: #F5F5F5;
         
+}
+
+.row{
+        display:grid;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-top: 20px ;
+        
+}
+
+.h2-servicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Servicios-text';
+    color:#F5F5F5 ;
+}
+.img-fluid{
+        filter: drop-shadow(0 0 4px rgba(0,0,0,0.8));
+        width: 65%;
 }
 
 
