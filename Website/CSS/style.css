@@ -1,4 +1,28 @@
 /*Importamos fuentes*/
+@keyframes show {
+        from {
+          opacity: 0;
+          scale: 25%;
+        }
+        to {
+          opacity: 1;
+          scale: 100%;
+        }
+        
+}
+/*img,p,h1,h2,h3,h4,h5,h6{
+        view-timeline-name: --image ;
+        view-timeline-axis: block;
+
+        animation-timeline:--image ;
+        animation-name: show;
+
+        animation-range: entry 25% cover 30%;
+        animation-fill-mode: both;
+
+}
+*/ 
+
 @font-face {
         font-family: "Nav-Banner";
         font-weight: bolder;
@@ -19,6 +43,7 @@ h1,h2,h3{
         font-family: "Titles";
 
 }
+
 @media (max-width: 1024px) {
     h1 {
         font-size: 7em; /* Tamaño más pequeño para tablets y pantallas medianas */
@@ -66,12 +91,17 @@ img{
 
 .Navb{
         background-color: #333D29;
-        font-size: 2vh;
+        font-size: 2dvh;
         font-family: "Nav-Banner";
         letter-spacing: 4px;
 }
+#navTog{
+        display: flex;
+        align-items: center;
+}
 .Banner{
         position: relative;
+        height: 100dvh;
 
 }
 .BannerImage{
@@ -194,12 +224,15 @@ img{
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: "Titles";
+        font-size: 3em;
 }
 #usText p{
         display: flex;
         justify-items: flex-start;
         font-family: "Servicios-Text";
         font-size: 1.1em;
+        text-align: center;
         
 }
 #usImage{
@@ -212,18 +245,52 @@ img{
         flex-direction: column;
         justify-content: flex-start;
         position: relative;
-        transform: translateY(-50px);
+        transform: translateY(0dvh);
+        text-align: left;
 }
 #whyusText h1{ 
        display: flex;
-       position: relative;
        font-family: "Titles";
        font-size: 9em;
+     
 }
 #whyusText p{
         display: flex;
         justify-items: flex-start;
         font-family: "Servicios-Text";
         font-size: 1.3em;
-        padding-top: 7vh;
+        padding-top: 5dvh;
+        text-align: justify;
+}
+#whyusText button{
+
+        display: flex;
+        font-family: "Servicios-Text";
+        font-weight: bolder;
+        font-size: 1.5em;
+        padding-top: 5dvh;
+        text-align: center;
+        background-color: #333D29;
+        color: #CCCCCC;
+        border: 2px solid #000000;
+        border-radius: 50px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition:ease-in-out 0.3s;
+}
+.row.row-cols-sm-2 > div {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Asegura que la columna tenga altura para permitir el centrado vertical */
+}
+footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #F5F5F5;
+        font-family: "Servicios-Text";
+        font-size: 1.5em;
+        padding: 20px 0;
 }
