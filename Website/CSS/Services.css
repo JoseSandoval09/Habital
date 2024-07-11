@@ -1,0 +1,49 @@
+body{
+        font-family: 'Servicios-Text';
+}
+h1,h2,h3{
+    font-family: "Titles";
+
+}
+span{
+
+    font-size: 2.5vh;
+    color: black;
+    letter-spacing: 2px;
+
+}
+.Discontainer{
+    height: calc(100dvh - 139.44px);
+   overflow: hidden;   
+   padding: 0 !important;
+}
+
+.Discontainer img{
+   height: 100%;
+   width: 100%;
+    object-fit:cover;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+.Discontainer h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F5F5F5;
+    font-family: "Titles";
+    font-size: 10vh;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 100%;
+}	
+.DisText{
+    position: relative;
+    margin-top: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
