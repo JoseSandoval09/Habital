@@ -69,9 +69,11 @@ img{
         height: auto;
         max-width: 100%;
 }
-
+.navbar-brand{
+        justify-content: space-around !important;
+}
 .Navb{
-        background-color: #333D29;
+        background-color: #333D29 !important;
         font-size: 2dvh;
         font-family: "Nav-Banner";
         letter-spacing: 4px;

@@ -1,5 +1,7 @@
-body{
-        font-family: 'Servicios-Text';
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 h1,h2,h3{
     font-family: "Titles";
@@ -12,38 +14,110 @@ span{
     letter-spacing: 2px;
 
 }
+.container-fluid{
+    padding: 0 !important;
+    margin: 0 !important;
+}
 .Discontainer{
-    height: calc(100dvh - 139.44px);
    overflow: hidden;   
    padding: 0 !important;
+   position: relative;
 }
-
 .Discontainer img{
-   height: 100%;
-   width: 100%;
+    height: 100vh;
+    width: 100%;
     object-fit:cover;
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
+    filter: blur(1px);
 }
 .Discontainer h1{
+    color: white;
+    text-shadow: 10px 10px 4px black;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #F5F5F5;
     font-family: "Titles";
     font-size: 10vh;
     letter-spacing: 4px;
     text-align: center;
-    width: 100%;
 }	
 .DisText{
-    position: relative;
-    margin-top: 100vh;
-    height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    display: flex;
     justify-content: center;
     align-items: center;
+    /* padding: 0 !important;
+    position: relative; */
+} 
+.DisText img{
+    display: flex;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    padding: 60px 60px 60px 60px;
+    border-radius: 100px;
+    border-color: black;
+    justify-content: center;
+    padding: 20px;
+}
+.col-lg-4{
+    display: flex;
+    padding: 10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+.row-col-sm-4{
+    display: flex;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.list-group-item{
+    display: flex;
+    font-family: "Servicios-Text";
+    font-size: 1.8vh;
+    color: black;
+    --bs-list-group-border-color:null;
+    text-align: justify;
+    font-weight: bolder;
+    align-content: center;
+    padding: 10px 10px 10px 10px;
+}
+.list-group{
+    justify-content: center;
+    flex-direction: column;
+}
+.liTitle{
+    font-family: "Titles";
+    font-size: 5vh;
+    color: black;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .Discontainer img {
+        height: 50vh; 
+        /* Ajuste para pantallas más pequeñas */
+    }
+
+    .Discontainer h1 {
+        font-size: 5vh; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .DisText img {
+        padding: 20px; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .list-group-item {
+        font-size: 2.5vh; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .liTitle {
+        font-size: 3vh; /* Ajuste para pantallas más pequeñas */
+    }
 }
