@@ -1,8 +1,31 @@
+@keyframes show {
+        from {
+          opacity: 0;
+          scale: 25%;
+        }
+        to {
+          opacity: 1;
+          scale: 100%;
+        }
+        
+}
+img,p,h1,h2,h3,h4,h5,h6,.list-group-item,.Bancontainer{
+        view-timeline-name: --image ;
+        view-timeline-axis: block;
+
+        animation-timeline:--image ;
+        animation-name: show;
+
+        animation-range: entry 25% cover 30%;
+        animation-fill-mode: both;
+
+}
 html, body{
     margin: 0;
     padding: 0;
     height: 100%;
 }
+
 h1,h2,h3{
     font-family: "Titles";
 
@@ -18,18 +41,18 @@ span{
     padding: 0 !important;
     margin: 0 !important;
 }
-.Discontainer{
+.Bancontainer{
    overflow: hidden;   
    padding: 0 !important;
    position: relative;
 }
-.Discontainer img{
+.Bancontainer img{
     height: 100vh;
     width: 100%;
     object-fit:cover;
     filter: blur(1px);
 }
-.Discontainer h1{
+.Bancontainer h1{
     color: white;
     text-shadow: 10px 10px 4px black;
     position: absolute;
@@ -41,14 +64,14 @@ span{
     letter-spacing: 4px;
     text-align: center;
 }	
-.DisText{
+.Text{
     width: 100%;
     justify-content: center;
     align-items: center;
     /* padding: 0 !important;
     position: relative; */
 } 
-.DisText img{
+.Text img{
     display: flex;
     height: auto;
     max-width: 100%;
@@ -100,16 +123,16 @@ span{
 }
 
 @media (max-width: 768px) {
-    .Discontainer img {
+    .Bancontainer img {
         height: 50vh; 
         /* Ajuste para pantallas más pequeñas */
     }
 
-    .Discontainer h1 {
+    .Bancontainer h1 {
         font-size: 5vh; /* Ajuste para pantallas más pequeñas */
     }
 
-    .DisText img {
+    .Text img {
         padding: 20px; /* Ajuste para pantallas más pequeñas */
     }
 
@@ -119,5 +142,10 @@ span{
 
     .liTitle {
         font-size: 3vh; /* Ajuste para pantallas más pequeñas */
+    }
+}
+@media screen and (min-width: 768px){
+    .container-fluid:not(.mx-5){
+        height: 100vh;
     }
 }

@@ -1,0 +1,43 @@
+
+.Banner{
+    overflow: hidden;
+    position: relative;
+
+}
+.Banner img{
+    height: 100vh;
+    width: 100%;
+    object-fit:cover;
+    filter: blur(1px);
+}
+.Banner h1{
+    color: white;
+    text-shadow: 10px 10px 4px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Titles";
+    font-size: 10vh;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 768px){
+    .container-fluid:not(.mx-5){
+        height: 100vh;
+    }
+}
+@media (max-width: 768px) {
+    .Banner img {
+        height: 50vh; 
+        /* Ajuste para pantallas más pequeñas */
+    }
+
+    .Banner h1 {
+        font-size: 5vh; /* Ajuste para pantallas más pequeñas */
+    }
+
+   
+}
