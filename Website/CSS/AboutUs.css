@@ -1,8 +1,35 @@
+@keyframes show {
+        from {
+          opacity: 0;
+          scale: 25%;
+        }
+        to {
+          opacity: 1;
+          scale: 100%;
+        }
+        
+}
+img,p,h1,h2,h3,h4,h5,h6,.list-group-item,.Bancontainer{
+        view-timeline-name: --image ;
+        view-timeline-axis: block;
+
+        animation-timeline:--image ;
+        animation-name: show;
+
+        animation-range: entry 25% cover 30%;
+        animation-fill-mode: both;
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Titles";
+}
+p{
+    font-family: "Servicios-Text";
+}
 
 .Banner{
     overflow: hidden;
     position: relative;
-
 }
 .Banner img{
     height: 100vh;
@@ -22,6 +49,53 @@
     letter-spacing: 4px;
     text-align: center;
 }
+.aboutT{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutT h1{
+    font-family: "Titles";
+    font-size: 10vh;
+    margin: 2vh 0;
+    text-align: center;
+}
+.aboutT p{
+    font-family: "Servicios-Text";
+    font-size: 2.6vh;
+    text-align: justify;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0; 
+    width: 30vh;
+    height: 30vh;
+    border: none;
+}
+.card h1{
+    font-family: "Titles";
+    font-size: 5vh;
+    text-align: center;
+    margin: 2vh 0;
+}
+.card p{
+    font-size: 2.2vh;
+    text-align: center;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.card img{
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0;
+
+}
 
 
 @media screen and (min-width: 768px){
@@ -37,6 +111,12 @@
 
     .Banner h1 {
         font-size: 5vh; /* Ajuste para pantallas más pequeñas */
+    }
+    .aboutT h1 {
+        font-size: 5vh; /* Ajuste para pantallas más pequeñas */
+    }
+    .aboutT p {
+        font-size: 1.6vh; /* Ajuste para pantallas más pequeñas */
     }
 
    
