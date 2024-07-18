@@ -21,42 +21,7 @@
         animation-fill-mode: both;
 
 }
-*/ 
-.container-fluid{
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 7em; /* Tamaño más pequeño para tablets y pantallas medianas */
-    }
-
-    p {
-        font-size: 1.1em;
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 5em; /* Tamaño para dispositivos móviles en orientación horizontal */
-    }
-
-    p {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 3em; /* Tamaño para dispositivos móviles en orientación vertical */
-    }
-
-    p {
-        font-size: 0.9em;
-    }
-}
+*/
 
 @keyframes showTopText {
   0% { transform: translate3d(0, 100%, 0); }
@@ -68,10 +33,9 @@
   0% { transform: translate3d(0, -100%, 0); }
   100% { transform: translate3d(0, 0, 0); }
 }
-img{
-        height: auto;
-        max-width: 100%;
-}
+
+
+
 .navbar-brand{
         justify-content: space-around !important;
 }
@@ -87,7 +51,6 @@ img{
 }
 .Banner{
         position: relative;
-        height: calc(100vh - 139.44px);
         overflow: hidden;
 }
 .Banner img{
@@ -98,132 +61,113 @@ img{
         height: 100dvh;
         
 }
-.BannerTitleAnimated{
-        position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        height: 90vh;
-        width: 90vh;
-        color: #FFFFFF;
+.Banner h1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Titles";
+    font-size: 10vh;
+    color: #F5F5F5;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    letter-spacing: 5px;
+    text-align: center;
 }
 
-
-.BannerTitleAnimated > div {
-        height: 50%;
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        }
-.BannerTitleAnimated > div div {
-        padding: 1vmin 0;
-        position: absolute;
-      }
-.BannerTitleAnimated > div div span {
-        display: block;
-      }
-.BannerTitleAnimated > div.text-top {
-        display: flex;
-        justify-content: center;
-        border-bottom: 0.4vmin solid #FFFFFF;
-        top: 0;
-      }
-.BannerTitleAnimated > div.text-top div {
-        animation: showTopText 1s;
-        animation-delay: 0.3s;
-        animation-fill-mode: forwards;
-        bottom: 0;
-        transform: translate(0, 100%);
-        text-align: center;
-        font-size: 8.1vmin;
-        letter-spacing: 5px;
-        font-family: "Titles";
-        color: #FFFFFF;
-      }
-.BannerTitleAnimated > div.text-top div span:first-child {
-        display: flex;
-        justify-content: center;
-        color: #FFFFFF;
-      }
-.BannerTitleAnimated > div.text-bottom {
-        display: flex;
-        justify-content: center;
-        bottom: 0;
-        
-      }
-.BannerTitleAnimated > div.text-bottom div {
-        animation: showBottomText 0.5s;
-        animation-delay: 1s;
-        animation-fill-mode: forwards;
-        top: 0;
-        transform: translate(0, -100%);
-        font-size: 2vmin;
-        text-align: center;
-        font-family: "Servicios-Text";
-        color: #FFFFFF;
-        letter-spacing: 2px;
-;
-      
-}
-#servicios{
-       display: flex;
-       flex-direction: column;
-       justify-content: flex-start;
-       align-items: center;
-       
-}
-#servicios h1{
-        font-family: "Servicios-Title";
-        font-weight: bolder;
-        font-size: 3em;
-        letter-spacing: 5px;
-        padding-top: 30px;
-        color: #F5F5F5;
-        
+.Banner span {
+    position: absolute;
+    top: calc(50% + 14vh); /* Ajusta este valor según el tamaño de tu h1 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Ajusta el ancho de la línea según prefieras */
+    height: 2px; /* Ajusta el grosor de la línea */
+    background-color: #F5F5F5; /* Color de la línea */
+    display: block;
 }
 
+.Banner p {
+    position: absolute;
+    top: calc(50% + 16vh); 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #F5F5F5; 
+    font-family: "Servicios-Text"; 
+    font-size: 2.5vh;
+}
 .row{
-        display:grid;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding-top: 20px ;
-        
+    justify-content: center;
+    align-items: center;
 }
-
-.h2-servicio {
+.card{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0; 
+    width: 30vh;
+    height: 30vh;
+    border: none;
+}
+.containerT{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Servicios-text';
-    color:#F5F5F5 ;
+    padding: 50px 0;
 }
-.img-fluid{
-        filter: drop-shadow(0 0 4px rgba(0,0,0,0.8));
-        width: 65%;
+.TitleS{
+    font-family: "Titles";
+    font-size: 15vh;
+    margin: 5vh 0;
+    text-align: center;
 }
-.NosotrosTittle{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Titles";
-        font-size: 3em;
+.col-lg-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
 }
-#usText p{
-        display: flex;
-        justify-items: flex-start;
-        font-family: "Servicios-Text";
-        font-size: 1.1em;
-        text-align: center;
-        
-}
-#usImage{
-        height: 50%;
-        width: 70%;
+.card h1{
+    font-family: "servicios-Text";
+    font-size: 3vh;
+    text-align: center;
+    margin: 20px;
+    font-weight: 600;
 }
 
+.card img{
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0;
+
+}
+
+#us img{
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+}
+
+#us p{
+        font-family: "Servicios-Text";
+        font-size: 1.5em;
+        text-align: justify;
+        font-weight: 600;
+        margin: 20px 0;;
+}
+#us > .col-lg-6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+}	
 #whyusText{
         display: flex;
         flex-direction: column;
@@ -246,35 +190,20 @@ img{
         padding-top: 5dvh;
         text-align: justify;
 }
-#whyusText button{
-
+.buttonH{
         display: flex;
         font-family: "Servicios-Text";
         font-weight: bolder;
         font-size: 1.5em;
-        padding-top: 5dvh;
         text-align: center;
         background-color: #333D29;
         color: #CCCCCC;
-        border: 2px solid #000000;
-        border-radius: 50px;
+        border-radius: 100px;
         padding: 10px 20px;
         cursor: pointer;
         transition:ease-in-out 0.3s;
 }
-.row.row-cols-sm-2 > div {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 100%; /* Asegura que la columna tenga altura para permitir el centrado vertical */
-}
-footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #F5F5F5;
-        font-family: "Servicios-Text";
-        font-size: 1.5em;
-        padding: 20px 0;
+
+
+@media screen and (min-width: 768px){
 }

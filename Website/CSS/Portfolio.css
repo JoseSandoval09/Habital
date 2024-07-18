@@ -1,0 +1,38 @@
+h1,h2,h3,h4,h5,h6{
+    font-family: "Titles"; 
+}
+p{
+    font-family: "Servicios-Text";
+}
+.container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-lg-6 h1{
+    font-size: 10vh;
+}
+.col-lg-6 p{
+    font-size: 2.6vh;
+    font-weight: lighter;
+    text-align: justify;
+    padding: 30px;
+}
+
+
+@media screen and (min-width: 768px){
+    .container-fluid:not(.mx-5){
+        height: 100vh;
+    }
+}
+@media (max-width: 768px) {
+    
+    .col-lg-6 h1 {
+        font-size: 8vh; /* Ajuste para pantallas más pequeñas */
+    }
+    .col-lg-6 p {
+        font-size: 2.3vh; /* Ajuste para pantallas más pequeñas */
+    }
+
+   
+}
