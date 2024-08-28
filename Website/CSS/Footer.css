@@ -1,0 +1,131 @@
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Banner-Text";
+}
+ul{
+    list-style: none;
+}
+footer{
+   padding: 20px;
+   color: #CCCCCC;
+   background-color: #656D4A;
+}
+.divider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sidemap, .Contacto, .image{
+    flex: 1;
+    margin: 10px;
+}
+.sidemap h1	{
+    font-size: 3em;
+}
+.sidemap h1::after{
+    content: "";
+    width: 150px;
+    height: 5px;
+    background-color: #333D29;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+.sidemap{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidemap li{
+    margin: 10px 0;
+}
+.sidemap  ul li a{
+    font-family: "Text";
+    font-size: 1.5em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: #CCCCCC;
+}
+.sidemap  ul li a:hover{
+    color: white;
+    padding-left: 10px;
+}
+.image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    width: 100%;
+    height: auto;
+}
+.Contacto{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.Contacto h1{
+    font-size: 3em;
+}
+.Contacto h1::after{
+    content: "";
+    width: 150px;
+    height: 5px;
+    background-color: #333D29;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+.Contacto li{
+    float: left;
+}
+.Contacto li a{
+    text-decoration: none;
+    font-size: 2em;
+    margin-right: 20px;
+    color: #CCCCCC;
+}
+.Contacto li a:hover{
+    color: white;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    footer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        height: auto;
+    }
+    .sidemap h1, .Contacto h1{
+        font-size: 2em;
+    }
+
+    .sidemap ul li a, .Contacto li a{
+        display: flex;
+        justify-content: center;
+        padding: 2px;
+        font-size: 1.5em;
+    }
+    .divider{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .image img{
+        width: 350px;
+        height: fit-content;
+    }
+   
+}

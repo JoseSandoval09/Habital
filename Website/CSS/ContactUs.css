@@ -111,4 +111,17 @@ form button {
 
    
 }
+@media print {
+  body {
+    width: 100%;
+  }
+
+  .no-break {
+    page-break-inside: avoid;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+}
 

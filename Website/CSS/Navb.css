@@ -1,0 +1,28 @@
+.navbar{
+    background-color: #333D29 !important;
+    font-size: 2dvh;
+    font-family: "Nav-Banner";
+    letter-spacing: 4px;
+    color: #F5F5F5;
+    padding: 10px 20px;
+
+}
+.row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-lg-6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.navbar-toggler{
+    background-color: white !important;
+    width: 50px !important;
+    display: flex;
+    align-items: center;
+}

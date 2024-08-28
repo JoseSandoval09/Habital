@@ -1,66 +1,28 @@
 /*Importamos fuentes*/
-@keyframes show {
-        from {
-          opacity: 0;
-          scale: 25%;
-        }
-        to {
-          opacity: 1;
-          scale: 100%;
-        }
-        
-}
-/*img,p,h1,h2,h3,h4,h5,h6{
-        view-timeline-name: --image ;
-        view-timeline-axis: block;
-
-        animation-timeline:--image ;
-        animation-name: show;
-
-        animation-range: entry 25% cover 30%;
-        animation-fill-mode: both;
-
-}
-*/
-
-@keyframes showTopText {
-  0% { transform: translate3d(0, 100%, 0); }
-  40%, 60% { transform: translate3d(0, 50%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Banner-Text";
+    background-color: #F5F5F5;
 }
 
-@keyframes showBottomText {
-  0% { transform: translate3d(0, -100%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-
-
-
-.navbar-brand{
-        justify-content: space-around !important;
-}
-.Navb{
-        background-color: #333D29 !important;
-        font-size: 2dvh;
-        font-family: "Nav-Banner";
-        letter-spacing: 4px;
-}
-#navTog{
-        display: flex;
-        align-items: center;
-}
 .Banner{
-        position: relative;
-        overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 90dvh;
 }
 .Banner img{
-        object-fit: cover;
-        filter: blur(4px);
-        -webkit-filter: blur(4px);
-        width: 100%;
-        height: 100dvh;
+    object-fit: cover;
+    filter: blur(4px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
         
 }
+
 .Banner h1 {
     width: 100%;
     position: absolute;
@@ -68,142 +30,224 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Titles";
-    font-size: 10vh;
+    font-size: 5vw;
     color: #F5F5F5;
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
     letter-spacing: 5px;
     text-align: center;
+    z-index: 2;
+    transition:  color 0.5s ease; 
 }
 
-.Banner span {
-    position: absolute;
-    top: calc(50% + 14vh); /* Ajusta este valor según el tamaño de tu h1 */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* Ajusta el ancho de la línea según prefieras */
-    height: 2px; /* Ajusta el grosor de la línea */
-    background-color: #F5F5F5; /* Color de la línea */
-    display: block;
-}
 
-.Banner p {
-    position: absolute;
-    top: calc(50% + 16vh); 
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: #F5F5F5; 
-    font-family: "Servicios-Text"; 
-    font-size: 2.5vh;
+.Nosotros{
+    width: 100%;
 }
-.row{
-    justify-content: center;
-    align-items: center;
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0; 
-    width: 30vh;
-    height: 30vh;
-    border: none;
-}
-.containerT{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 0;
-}
-.TitleS{
+.Nosotros h1{
     font-family: "Titles";
-    font-size: 15vh;
-    margin: 5vh 0;
+    font-size: 7vh;
     text-align: center;
+    margin-top: 5vh;
+    margin-top: 50px;
 }
-.col-lg-3{
+.Nosotros h1::after{
+    content: "";
+    width: 400px;
+    height: 5px;
+    background-color: #333D29;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+.divider{
+    width: 98%;
+    padding: 0px 60px;
+    margin: 60px auto;
+    align-items: center;
+    background-color: #656D4A;
+    border-radius: 100px;
+
+}
+.contenido{
+    width: 60%;
+    float: left;
+    text-align: left;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.contenido p{
+    font-family: "Text";
+    font-size: 1.6em;
+    line-height: 1.5em;
+    font-weight: 500;
+    color: #F5F5F5;
+    margin-top: 20px;
+    width: 70%;
+    text-align: justify;
+}
+.imagenUs{
+    width: 40%;
+    float: right;
+    padding: 0px 20px;
+}
+.imagenUs img{
+    max-width: 100%;
+    border-radius: 50px;
+    border-color: #656D4A;
+}
+.button{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.button button{
+    color: white;
+    background-color:#333D29  ;
+    padding: 10px 20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 2em;
+    font-family: "Text";
+    border-radius: 50px;
+}
+.button button:hover{
+    background-color: #CCCCCC;
+    color: black;
+    transition: 0.5s;
+}
+.services{
+    width: 100%;
+}
+.services h1{
+    font-family: "Titles";
+    font-size: 7vh;
+    text-align: center;
+    margin-top: 5vh;
+    margin-top: 50px;
+}
+.services h1::after{
+    content: "";
+    width: 400px;
+    height: 5px;
+    background-color: #333D29;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+.divider2{
+
+    padding: 0px 10px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+
+}
+.servicios{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    padding: 20px;
+    flex-wrap: nowrap;
 }
-.card h1{
-    font-family: "servicios-Text";
-    font-size: 3vh;
-    text-align: center;
+.servicio{
+    width: 400px;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333D29;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    height: 400px;
+    border-radius: 50px;
+}
+.servicio h3{
+   color: #F5F5F5;
+}
+.servicio li{
+    list-style: disc;
+    color: #F5F5F5;
+    font-family: "Text";
+    font-size: 1.4em;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.servicio img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.whyUs{
+    width: 100%;
+}
+.whyUs h1{
+    font-family: "Titles";
+    font-size: 7vh;
+    text-align: left;
+    margin-top: 5vh;
+    padding-left: 50px;
+    float: left;
+    color: black;
+}
+.divider3{
+    padding: 0px 10px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+}
+.Text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.Text p{
+    font-family: "Text";
+    font-size: 1.4em;
+    line-height: 1.5em;
     font-weight: 600;
+    color: black;
+    margin-top: 20px;
+    width: 90%;
+    text-align: justify;
+}
+.imag{
+    width: 40%;
+    float: right;
+    padding: 0px 20px;
+}
+.imag img{
+    max-width: 100%;
+    border-color: #656D4A;
 }
 
-.card img{
-    height: 100%;
-    width: 70%;
-    object-fit: cover;
-    border-radius: 20px;
-    margin: 0;
 
-}
 
-#us img{
+/* Media Queries */
 
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin: 0;
-}
 
-#us p{
-        font-family: "Servicios-Text";
-        font-size: 1.5em;
-        text-align: justify;
-        font-weight: 600;
-        margin: 20px 0;;
-}
-#us > .col-lg-6{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-}	
-#whyusText{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        position: relative;
-        transform: translateY(0dvh);
-        text-align: left;
-}
-#whyusText h1{ 
-       display: flex;
-       font-family: "Titles";
-       font-size: 9em;
-     
-}
-#whyusText p{
-        display: flex;
-        justify-items: flex-start;
-        font-family: "Servicios-Text";
-        font-size: 1.3em;
-        padding-top: 5dvh;
-        text-align: justify;
-}
-.buttonH{
-        display: flex;
-        font-family: "Servicios-Text";
-        font-weight: bolder;
-        font-size: 1.5em;
-        text-align: center;
-        background-color: #333D29;
-        color: #CCCCCC;
-        border-radius: 100px;
+@media (max-width: 576px) {
+    .Banner h1 {
+        font-size: 6vh;
+    }
+
+    .Nosotros h1, .services h1, .whyUs h1 {
+        font-size: 4vh;
+    }
+
+    .contenido p, .Text p {
+        font-size: 1.2em;
+    }
+
+    .button button {
+        font-size: 1.2em;
         padding: 10px 20px;
-        cursor: pointer;
-        transition:ease-in-out 0.3s;
-}
-
-
-@media screen and (min-width: 768px){
+        margin: 10px 0;
+    }
 }

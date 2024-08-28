@@ -1,123 +1,86 @@
-@keyframes show {
-        from {
-          opacity: 0;
-          scale: 25%;
-        }
-        to {
-          opacity: 1;
-          scale: 100%;
-        }
-        
-}
-img,p,h1,h2,h3,h4,h5,h6,.list-group-item,.Bancontainer{
-        view-timeline-name: --image ;
-        view-timeline-axis: block;
-
-        animation-timeline:--image ;
-        animation-name: show;
-
-        animation-range: entry 25% cover 30%;
-        animation-fill-mode: both;
-
-}
-h1,h2,h3,h4,h5,h6{
-    font-family: "Titles";
-}
-p{
-    font-family: "Servicios-Text";
-}
-
-.Banner{
-    overflow: hidden;
-    position: relative;
-}
-.Banner img{
-    height: 100vh;
+.banner{
+    display: flex;
     width: 100%;
-    object-fit:cover;
-    filter: blur(1px);
+    border-radius: 10%;
 }
-.Banner h1{
-    color: white;
-    text-shadow: 10px 10px 4px black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Titles";
-    font-size: 10vh;
-    letter-spacing: 4px;
-    text-align: center;
+.banner img{
+    padding-top: 3%;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
-.aboutT{
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-6{
+    display: flex;
+    justify-content: center;
+}
+#linetxt{
+    height: 90%;
+    border-left:5px solid black;
+    
+}
+.bannerTitle{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.aboutT h1{
+.bannerTitle h1{
     font-family: "Titles";
-    font-size: 10vh;
-    margin: 2vh 0;
-    text-align: center;
+    font-size: 5em;
+;
 }
-.aboutT p{
-    font-family: "Servicios-Text";
-    font-size: 2.6vh;
+.bannerTitle p{
+    font-weight: 600;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    font-family: "Text";
+    font-size: 1.3em;
     text-align: justify;
-    font-weight: 600;
-    margin: 20px 0;
 }
-.card{
+
+.MVV{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 10px 0; 
-    width: 30vh;
-    height: 30vh;
-    border: none;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: justify;
 }
-.card h1{
-    font-family: "Titles";
-    font-size: 5vh;
+.MVV h1{
+    font-size: 3em;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 3%;
     text-align: center;
-    margin: 2vh 0;
 }
-.card p{
-    font-size: 2.2vh;
-    text-align: center;
+.MVV p{ 
+    font-family: "Text";
+    font-size: 1.3em;
     font-weight: 600;
-    margin: 20px 0;
+    text-align: justify;
 }
-.card img{
-    height: 50%;
-    width: 50%;
-    object-fit: cover;
-    border-radius: 20px;
-    margin: 0;
-
+.MVV img{
+    display: flex;
+    align-items: center;
+    object-fit: contain;  
+    width: 70%;
+    height: 70%;
+    border-radius:50%;
+    padding-left: 10%;
 }
-
-
-@media screen and (min-width: 768px){
-    .container-fluid:not(.mx-5){
-        height: 100vh;
-    }
-}
-@media (max-width: 768px) {
-    .Banner img {
-        height: 50vh; 
-        /* Ajuste para pantallas más pequeñas */
-    }
-
-    .Banner h1 {
-        font-size: 5vh; /* Ajuste para pantallas más pequeñas */
-    }
-    .aboutT h1 {
-        font-size: 5vh; /* Ajuste para pantallas más pequeñas */
-    }
-    .aboutT p {
-        font-size: 1.6vh; /* Ajuste para pantallas más pequeñas */
-    }
-
-   
+.MVV .row{
+    padding-bottom: 5%;
 }
