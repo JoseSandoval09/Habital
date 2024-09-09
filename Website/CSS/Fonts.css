@@ -1,15 +1,15 @@
 @font-face {
         font-family: "Nav-Banner";
-        font-weight: bolder;
-        src:url(/Habital/Website/fonts/MYRIADPRO-REGULAR.woff);
+        font-weight: bold;
+        src:url(/Website/fonts/Lato-Regular.woff);
 }
 @font-face {
         font-family: 'Text';
-        src: url(/Habital/Website/fonts/GeneralSans-Light.woff);
+        src: url(/Website/fonts/Lato-Regular.woff);
 }
 @font-face {
         font-family: "Titles";
-        src: url(/Habital/Website/fonts/NeueMontreal-Bold.woff);
+        src: url(/Website/fonts/PlayfairDisplay-VariableFont_wght.woff);
 }
 body{
         font-family: 'Servicios-Text';

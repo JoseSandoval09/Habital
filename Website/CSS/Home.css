@@ -31,7 +31,7 @@ body{
     transform: translate(-50%, -50%);
     font-family: "Titles";
     font-size: 5vw;
-    color: #F5F5F5;
+    color: #F2F2F2;
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
     letter-spacing: 5px;
     text-align: center;
@@ -41,7 +41,9 @@ body{
 
 
 .Nosotros{
+    z-index: 1;
     width: 100%;
+    overflow: visible;
 }
 .Nosotros h1{
     font-family: "Titles";
@@ -60,12 +62,14 @@ body{
     margin: auto;
 }
 .divider{
-    width: 98%;
+    height: 500px;
+    width: 90%;
     padding: 0px 60px;
     margin: 60px auto;
     align-items: center;
-    background-color: #656D4A;
-    border-radius: 100px;
+    background-color: #5D6D6D;
+    overflow: visible;
+    position: relative;
 
 }
 .contenido{
@@ -89,14 +93,20 @@ body{
     text-align: justify;
 }
 .imagenUs{
+    height: 120%;
     width: 40%;
     float: right;
     padding: 0px 20px;
 }
 .imagenUs img{
+    right: -60px;
+    position: absolute;
+    height: 110%;
+    z-index: 2;
     max-width: 100%;
-    border-radius: 50px;
     border-color: #656D4A;
+    top: -20px;
+
 }
 .button{
     margin-top: 40px;
@@ -105,7 +115,7 @@ body{
 }
 .button button{
     color: white;
-    background-color:#333D29  ;
+    background-color:#5D6D6D ;
     padding: 10px 20px;
     text-decoration: none;
     letter-spacing: 1px;
@@ -114,7 +124,7 @@ body{
     border-radius: 50px;
 }
 .button button:hover{
-    background-color: #CCCCCC;
+    background-color: white;
     color: black;
     transition: 0.5s;
 }
@@ -158,19 +168,16 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #333D29;
+    background-color: #E0E0E0;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transition: 0.5s;
     height: 400px;
     border-radius: 50px;
 }
-.servicio h3{
-   color: #F5F5F5;
-}
+
 .servicio li{
     list-style: disc;
-    color: #F5F5F5;
     font-family: "Text";
     font-size: 1.4em;
     margin-top: 10px;
@@ -218,11 +225,15 @@ body{
     text-align: justify;
 }
 .imag{
-    width: 40%;
+    width: 50%;
     float: right;
+    background-color: #5D6D6D;
     padding: 0px 20px;
+    border-radius: 5%;
 }
 .imag img{
+    padding: 20px 20px 20px 20px;
+    border-radius: 10%;
     max-width: 100%;
     border-color: #656D4A;
 }

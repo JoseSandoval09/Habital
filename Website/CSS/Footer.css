@@ -4,6 +4,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family:"Banner-Text";
+    background-color: #0A1818;
 }
 ul{
     list-style: none;
@@ -11,13 +12,14 @@ ul{
 footer{
    padding: 20px;
    color: #CCCCCC;
-   background-color: #656D4A;
+   background-color: #0A1818;
 }
 .divider{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background-color: #0A1818;
 }
 .sidemap, .Contacto, .image{
     flex: 1;
@@ -30,7 +32,7 @@ footer{
     content: "";
     width: 150px;
     height: 5px;
-    background-color: #333D29;
+    background-color: #7FBF9F;
     border-radius: 10px;
     display: block;
     margin: auto;
@@ -82,7 +84,7 @@ footer{
     content: "";
     width: 150px;
     height: 5px;
-    background-color: #333D29;
+    background-color: #7FBF9F;
     border-radius: 10px;
     display: block;
     margin: auto;

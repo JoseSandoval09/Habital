@@ -1,10 +1,11 @@
 .navbar{
-    background-color: #333D29 !important;
+    background-color: #0A1818   !important;
     font-size: 2dvh;
     font-family: "Nav-Banner";
     letter-spacing: 4px;
-    color: #F5F5F5;
+    color: #FFFFFF;
     padding: 10px 20px;
+    
 
 }
 .row{
