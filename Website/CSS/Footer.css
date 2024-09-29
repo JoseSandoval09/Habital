@@ -10,7 +10,6 @@ ul{
     list-style: none;
 }
 footer{
-   padding: 20px;
    color: #CCCCCC;
    background-color: #0A1818;
 }
@@ -27,6 +26,9 @@ footer{
     margin: 10px;
 }
 .sidemap h1	{
+    font-family: 'Titles';
+    font-weight: 700;
+    letter-spacing: 3px;
     font-size: 3em;
 }
 .sidemap h1::after{
@@ -79,6 +81,9 @@ footer{
     padding: 20px;
 }
 .Contacto h1{
+    font-family: 'Titles';
+    font-weight: 700;
+    letter-spacing: 3px;
     font-size: 3em;
 }
 .Contacto h1::after{

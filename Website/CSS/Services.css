@@ -2,10 +2,9 @@ h1{
     font-family: "Titles";
 }	
 p{
-    padding-left: 10px 10px 10px 10px;
     font-family: "Text";
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .disPro{
@@ -32,14 +31,16 @@ p{
     font-weight: 700;
     color: #000;
     margin-bottom: 3%;
-    text-align: justify;
+    text-align: center;
 }
-
+.col-lg-3{
+    padding-bottom: 5%;
+}
 .imgDis{
     display: flex;
     align-items: center;
     object-fit: contain;  
-    width: 60%;
+    width: 90%;
     height: 100%;
     border-radius:50%;
     border-color: #000;
@@ -54,23 +55,23 @@ p{
     flex-direction: column;
     margin-top: 2%;
     margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
     border-radius: 10px;
-    transition: 0.3s;
     text-align: justify;
     font-weight: 700;
     margin-bottom: 3%;
     
 }
 .disIng h1{
-    font-size: 5em;
-    font-weight: 700;
-    margin-bottom: 3%;
+    font-size: 6em;
+    font-weight: 800;
+    color: #000;
+    margin-top: 2%;
+    color: white;
 }
 .disIng h3{
     font-size: 2em;
     font-weight: 700;
+    color: white;
     margin-bottom: 3%;
     text-align: center;
 }
