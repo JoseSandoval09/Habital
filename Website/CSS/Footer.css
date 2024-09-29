@@ -14,7 +14,8 @@ footer{
    color: #CCCCCC;
    background-color: #0A1818;
 }
-.divider{
+.dividerfooter{
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;

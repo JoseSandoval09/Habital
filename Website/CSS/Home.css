@@ -76,7 +76,8 @@ body{
     width: 60%;
     float: left;
     text-align: left;
-    padding: 0px 50px;
+    padding-right: 120px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,11 +100,11 @@ body{
     padding: 0px 20px;
 }
 .imagenUs img{
-    right: -60px;
+    right: -20px;
     position: absolute;
     height: 110%;
-    z-index: 2;
-    max-width: 100%;
+    z-index: 1;
+    width: 50%;
     border-color: #656D4A;
     top: -20px;
 
