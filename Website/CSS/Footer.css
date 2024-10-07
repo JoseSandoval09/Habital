@@ -4,14 +4,13 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family:"Banner-Text";
-    background-color: #0A1818;
 }
 ul{
     list-style: none;
 }
 footer{
    color: #CCCCCC;
-   background-color: #0A1818;
+   background-color: #0f3631;
 }
 .dividerfooter{
     height: auto;

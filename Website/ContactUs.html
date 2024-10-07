@@ -16,39 +16,44 @@
 <body>
     <!-- Barra de navegacion --> 
     <div id="navbar-container"></div>
-    <!--Formulario-->
-    <div class="container">
-        <div class="row row-cols-sm-2">
-        <div class="col-lg-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.0780992771934!2d-116.9433674318627!3d32.47060277112809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d939ab646aea13%3A0x5aac8efef8116577!2sDe%20La%20Luz%208803%2C%20Campos%2C%2022127%20Tijuana%2C%20B.C.!5e0!3m2!1sen!2smx!4v1720571853618!5m2!1sen!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="col-lg-6">
-            <!-- Formulario de contacto/solicitud de servicios -->
-            <form action="tu_script_de_procesamiento.php" method="POST">
-                <div class="mb-lg-3">
-                    <label for="nombre" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
-                </div>
-                <div class="mb-lg-3">
-                    <label for="correo" class="form-label">Correo:</label>
-                    <input type="email" class="form-control" id="correo" name="correo" required>
-                </div>
-                <div class="mb-lg-3">
-                    <label for="descripcion" class="form-label">Descripción del proyecto/servicio a solicitar:</label>
-                    <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
-                </div>
-                <div class="mb-lg-3">
-                    <label for="servicio" class="form-label">Seleccione el servicio:</label>
-                    <select class="form-select" id="servicio" name="servicio">
-                        <option selected>Elige una opción</option>
-                        <option value="diseno_proyecto">Diseño de Proyecto</option>
-                        <option value="diseno_ingenierias">Diseño de Ingenierías</option>
-                        <option value="construccion">Construcción</option>
-                        <option value="consultoria">Consultoría</option>
+    <
+    <div class="contact-container">
+        <h1>Contáctanos</h1>
+
+        <div class="contact-content">
+            <!-- Formulario -->
+            <div class="form-container">
+                <form action="#" method="post">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <label for="reason">Motivo de contacto:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="presupuesto">Solicitar presupuesto</option>
+                        <option value="soporte">Soporte técnico</option>
+                        <option value="otros">Otros</option>
                     </select>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="map-container">
+                <h2>Nuestra Ubicación</h2>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.497527408135!2d-122.08424968468155!3d37.42199977982512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb5f76f5b2f7%3A0xb2908e7be5a1eac!2s1600+Amphitheatre+Pkwy%2C+Mountain+View%2C+CA+94043%2C+EE.+UU.!5e0!3m2!1ses!2smx!4v1632424989812!5m2!1ses!2smx" 
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
         </div>
     </div>
 

@@ -1,38 +1,80 @@
-h1,h2,h3,h4,h5,h6{
-    font-family: "Titles"; 
+/* Grid general */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Ajusta para mostrar 3 o 4 columnas */
+    gap: 20px; /* Espacio entre cada card */
+    padding: 20px;
 }
-p{
-    font-family: "Servicios-Text";
-}
-.container-fluid{
+
+/* Estilos de las cards */
+.project {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.col-lg-6 h1{
-    font-size: 10vh;
-}
-.col-lg-6 p{
-    font-size: 2.6vh;
-    font-weight: lighter;
-    text-align: justify;
-    padding: 30px;
+    flex-direction: column; /* Alinea el contenido verticalmente */
+    justify-content: space-between; /* Distribuye el contenido de la card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
 }
 
-
-@media screen and (min-width: 768px){
-    .container-fluid:not(.mx-5){
-        height: 100vh;
-    }
+.project:hover {
+    transform: translateY(-5px); /* Efecto hover para resaltar la card */
 }
+
+/* Estilos de la imagen */
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid #333; /* Ligeramente para dividir la imagen del contenido */
+}
+
+/* Estilos del título */
+.project h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #333; /* Color del texto del título */
+}
+
+/* Estilos del botón */
+.project button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #333; /* Borde del botón */
+    color: #333; /* Color del texto del botón */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.project button:hover {
+    background-color: #333; /* Color de fondo al pasar el ratón por encima */
+    color: #fff; /* Color del texto al pasar el ratón por encima */
+}
+
+/* Texto general dentro de la card */
+.project p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0 10px;
+    text-align: center;
+}
+
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    
-    .col-lg-6 h1 {
-        font-size: 8vh; /* Ajuste para pantallas más pequeñas */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas pequeñas */
     }
-    .col-lg-6 p {
-        font-size: 2.3vh; /* Ajuste para pantallas más pequeñas */
-    }
+}
 
-   
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Cambia a 1 columna en pantallas muy pequeñas */
+    }
 }
