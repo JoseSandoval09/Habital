@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="/Website/loadNavb.js"></script>
     <script src="/Website/loadFooter.js"></script>
+ 
 </head>
 <body>
     <!-- Barra de navegacion -->
@@ -19,14 +20,17 @@
     <div class="portfolio-grid">
         
         <div class="project" data-proyect="1">
-            <img src="/Website/Resources/Portfolio/1. DEPARTAMENTOS CAMPOS/4-10. DPTOS CAMPOS .jpg" alt="Proyecto 1">
+            <img src="/Website/Resources/Portfolio/1. DEPARTAMENTOS CAMPOS/4-10DPTOS CAMPOS .jpg" alt="Proyecto 1">
             <h1>Departamentos CAMPOS</h1>
-            <button class="view-more">Detalles</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal" data-id="1" >
+                Ver Detalles del Proyecto
+            </button>
+            
         </div>
 
-        <div class="project" data-proyect="2">
-            <img src="/Website/Resources/Portfolio/2. DEPARTAMENTOS CASCADA/2-3. DPTOS CASCADA.jpg" alt="Proyecto 1">
-            <h1>Departamentos CASCADA</h1>
+        <div class="project" data-proyect="8">
+            <img src="/Website/Resources/Portfolio/8. CENTRO COMUNITARIO PRADERAS/2-3. CENTRO COM P.JPG" alt="Proyecto 1">
+            <h1>Centro comunitario PRADERAS</h1>
             <button class="view-more">Detalles</button>
         </div>
 
@@ -36,17 +40,18 @@
             <button class="view-more">Detalles</button>
         </div>
 
+        <div class="project" data-proyect="11">
+            <img src="/Website/Resources/Portfolio/11. REMODELACION CASA HABITACION JMT/3-5. REM CASA HAB JMT.JPG" alt="Proyecto 1">
+            <h1>Remodelacion Casa Habitacion JMT</h1>
+            <button class="view-more">Detalles</button>
+        </div>
+
         <div class="project" data-proyect="4">
             <img src="/Website/Resources/Portfolio/4. CASA HABITACION SO/4-7. CASA HAB SO.jpg" alt="Proyecto 1">
             <h1>Casa HABITACION SO</h1>
             <button class="view-more">Detalles</button>
         </div>
 
-        <div class="project" data-proyect="5">
-            <img src="/Website/Resources/Portfolio/5. CASA HABITACION TS/1-3. CASA HAB TS.png" alt="Proyecto 1">
-            <h1>Casa HABITACION TS</h1>
-            <button class="view-more">Detalles</button>
-        </div>
 
         <div class="project" data-proyect="6">
             <img src="/Website/Resources/Portfolio/6. CASA HABITACION AG/3-7. CASA HAB AG.JPG" alt="Proyecto 1">
@@ -60,11 +65,6 @@
             <button class="view-more">Detalles</button>
         </div>
 
-        <div class="project" data-proyect="8">
-            <img src="/Website/Resources/Portfolio/8. CENTRO COMUNITARIO PRADERAS/2-3. CENTRO COM P.JPG" alt="Proyecto 1">
-            <h1>Centro comunitario PRADERAS</h1>
-            <button class="view-more">Detalles</button>
-        </div>
 
         <div class="project" data-proyect="9">
             <img src="/Website/Resources/Portfolio/9. BODEGAS COMERCIALES ZJ/5-6. BODEGAS COM ZJ.jpg" alt="Proyecto 1">
@@ -78,9 +78,9 @@
             <button class="view-more">Detalles</button>
         </div>
 
-        <div class="project" data-proyect="11">
-            <img src="/Website/Resources/Portfolio/11. REMODELACION CASA HABITACION JMT/3-5. REM CASA HAB JMT.JPG" alt="Proyecto 1">
-            <h1>Remodelacion Casa Habitacion JMT</h1>
+        <div class="project" data-proyect="5">
+            <img src="/Website/Resources/Portfolio/5. CASA HABITACION TS/1-3. CASA HAB TS.png" alt="Proyecto 1">
+            <h1>Casa HABITACION TS</h1>
             <button class="view-more">Detalles</button>
         </div>
 
@@ -96,6 +96,12 @@
             <button class="view-more">Detalles</button>
         </div>
 
+        <div class="project" data-proyect="2">
+            <img src="/Website/Resources/Portfolio/2. DEPARTAMENTOS CASCADA/2-3. DPTOS CASCADA.jpg" alt="Proyecto 1">
+            <h1>Departamentos CASCADA</h1>
+            <button class="view-more">Detalles</button>
+        </div>
+
         <div class="project" data-proyect="14">
             <img src="/Website/Resources/Portfolio/14. REMODELACION FACHADA AR/2-2. REM FACHADA AR.jpg" alt="Proyecto 1">
             <h1>Remodelacion Fachada AR</h1>
@@ -104,7 +110,7 @@
 
         
         <div class="project" data-proyect="15">
-            <img src="/Website/Resources/Portfolio/1. DEPARTAMENTOS CAMPOS/4-10. DPTOS CAMPOS .jpg" alt="Proyecto 1">
+            <img src="/Website/Resources/Portfolio/1. DEPARTAMENTOS CAMPOS/4-10DPTOS CAMPOS .jpg" alt="Proyecto 1">
             <h1>Departamentos HENRY</h1>
             <button class="view-more">Detalles</button>
         </div>
@@ -132,7 +138,29 @@
 
     </div>
 
-   
+    <!-- Modal -->
+    <!-- Modal -->
+    <<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="projectDescription"></p>
+                    <p><strong>Superficie:</strong> <span id="projectSurface"></span></p>
+                    <p><strong>Cliente:</strong> <span id="projectClient"></span></p>
+                    <p><strong>Ubicación:</strong> <span id="projectLocation"></span></p>
+                    <p><strong>Año:</strong> <span id="projectDate"></span></p>
+                    <div id="projectImages"></div> <!-- Contenedor para imágenes -->
+                </div>
+            </div>
+        </div>
+    </div>
     
+    
+   
+    <script src="/Website/loadModal.js"></script> 
 </body>
 </html>
