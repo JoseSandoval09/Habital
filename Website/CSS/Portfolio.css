@@ -1,23 +1,22 @@
 /* Grid general */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Ajusta para mostrar 3 o 4 columnas */
-    gap: 20px; /* Espacio entre cada card */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Ajusta para mostrar 3 o 4 columnas */
+    gap: 50px; /* Espacio entre cada card */
     padding: 20px;
+
 }
 
 /* Estilos de las cards */
 .project {
     display: flex;
     flex-direction: column; /* Alinea el contenido verticalmente */
-    justify-content: space-between; /* Distribuye el contenido de la card */
-    border-radius: 10px;
+    justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
     overflow: hidden;
     background-color: #fff;
     transition: transform 0.2s ease-in-out;
     min-height: 300px; /* Altura mínima de la card */
-    height: 100%;
 }
 
 .project:hover {
@@ -27,10 +26,8 @@
 /* Estilos de la imagen */
 .project img {
     width: 100%;
-    height: auto;
+    height:500px;
     display: block;
-    width: 100%;
-    height: 500px; /* Altura de la imagen */
     object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
 }
 
@@ -71,71 +68,166 @@
 }
 
 /* Estilo para el modal */
+/* Estilo del contenido del modal */
 .modal-content {
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
-    overflow: hidden; /* Asegura que los bordes redondeados se apliquen correctamente */
+    border-radius: 20px; /* Bordes redondeados más suaves */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra más suave y elegante */
+    overflow: hidden;
+    background-color: #ffffff; /* Fondo blanco puro */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones para apertura/cierre */
 }
 
+/* Efecto suave al abrir el modal */
+.modal-content.show {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* Estilo del encabezado del modal */
 .modal-header {
-    background-color: #007bff; /* Fondo azul */
-    color: white; /* Texto blanco */
-    border-bottom: none; /* Sin borde inferior */
+    background-color: #ffffff; /* Fondo blanco para simplicidad */
+    color: #333333; /* Texto oscuro elegante */
+    border-bottom: 1px solid #e5e5e5; /* Línea divisoria tenue */
+    padding: 15px 20px; /* Ajuste de espaciado */
 }
 
 .modal-title {
-    font-weight: bold; /* Texto en negrita */
+    font-weight: 600; /* Negrita ligera */
+    font-size: 1.25rem; /* Tamaño de fuente para resaltar el título */
+    color: #2c3e50; /* Azul oscuro elegante */
+    letter-spacing: 0.5px; /* Separación ligera */
 }
 
+/* Estilo del cuerpo del modal */
 .modal-body {
-    padding: 20px; /* Espaciado interno */
-    background-color: #f8f9fa; /* Fondo gris claro */
-    font-weight: bold;
+    padding: 20px 25px;
+    background-color: #fafafa; /* Fondo gris muy claro */
+    color: #555555; /* Texto gris suave */
+    font-size: 1rem; /* Tamaño de texto moderado */
+    line-height: 1.6; /* Espaciado de líneas para mejorar legibilidad */
 }
 
+/* Estilo del pie del modal */
 .modal-footer {
-    background-color: #f8f9fa; /* Fondo gris claro */
-    border-top: none; /* Sin borde superior */
+    background-color: #ffffff; /* Fondo blanco para armonizar con el resto */
+    border-top: 1px solid #e5e5e5; /* Línea divisoria tenue */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Espaciado entre botones */
+}
+
+/* Botones del modal */
+.modal-footer .btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+}
+
+.modal-footer .btn-close {
+    background-color: transparent;
+    color: #333333;
+    font-size: 1.2rem;
+    border: none;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.modal-footer .btn-close:hover {
+    opacity: 1;
 }
 
 
 
-/* Estilo para el carrusel */
+/* Estilos generales del carrusel */
 .carousel {
     width: 100%;
-
+    max-width: 900px;        /* Tamaño máximo del carrusel */
     margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);  /* Sombra alrededor */
+    position: relative;
 }
 
+/* Estilos para las imágenes */
 .carousel img {
     width: 100%;
-    max-height: 800px;
+    height: 500px;           /* Ajusta la altura que prefieras */
     object-fit: cover;
-    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.4s ease;  /* Transición suave al cambiar de imagen */
+    border-radius: 15px;
 }
 
-.slick-prev, .slick-next {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    border-radius: 50%;
-    width: 50px; /* Aumenta el tamaño de las flechas */
-    height: 50px;
+/* Hover con zoom en la imagen */
+.carousel img:hover {
+    transform: scale(1.05);   /* Efecto de zoom al pasar el cursor */
+}
+
+/* Flechas de navegación */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;                /* Ajusta el ancho de los botones */
+    height: 100%;
+    position: absolute;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: b;
-    font-size: 20px; /* Aumenta el tamaño del icono de la flecha */
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);   /* Fondo semitransparente para visibilidad */
+    z-index: 10;
+    transition: background 0.3s ease;
 }
 
-.slick-prev:hover, .slick-next:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el ratón */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.5);   /* Efecto al pasar sobre la flecha */
 }
 
-.slick-dots li button:before {
-    color: white; /* Color de los puntos de navegación */
+.carousel-control-prev {
+    left: 0;
+    border-radius: 0 10px 10px 0;    /* Bordes redondeados a la izquierda */
 }
 
-.slick-dots li.slick-active button:before {
-    color: #007bff; /* Color del punto activo */
+.carousel-control-next {
+    right: 0;
+    border-radius: 10px 0 0 10px;    /* Bordes redondeados a la derecha */
+}
+
+/* Indicadores personalizados */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    gap: 10px;              /* Espacio entre los indicadores */
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);  /* Color inicial */
+    border-radius: 50%;    /* Forma circular */
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    background-color: #ffffff;   /* Color al estar activo */
+}
+
+/* Transiciones suaves para el contenido */
+.carousel-item {
+    transition: opacity 0.6s ease-in-out;
 }
 
 
