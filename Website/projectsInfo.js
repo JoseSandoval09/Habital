@@ -1,5 +1,6 @@
 const proyectos = {
     1: {
+        nombre: 'Departamentos Campos',
         imagenes: [
             '/Website/Resources/Portfolio/1DEPARTAMENTOSCAMPOS/1-10DPTOSCAMPOS.webp',
             '/Website/Resources/Portfolio/1DEPARTAMENTOSCAMPOS/2-10DPTOSCAMPOS.webp',
@@ -19,6 +20,7 @@ const proyectos = {
         descripcion: 'Diseño y construcción de departamentos.'
     },
     2: {
+        nombre: 'Departamentos Cascada',
         imagenes: [
             '/Website/Resources/Portfolio/2DEPARTAMENTOSCASCADA/1-3DPTOSCASCADA.webp',
             '/Website/Resources/Portfolio/2DEPARTAMENTOSCASCADA/2-3DPTOSCASCADA.webp',
@@ -31,6 +33,7 @@ const proyectos = {
         descripcion: 'Diseño arquitectónico, diseño y cálculo de las instalaciones: hidráulica, sanitaria y pluvial de seis departamentos distribuidos en tres niveles, un nivel de sótano de estacionamiento y una terraza.'
     },
     3: {
+        nombre: 'Oficinas ADMAC',
         imagenes: [
             '/Website/Resources/Portfolio/3OFICINASADMAC/1-5OFICINASADMAC.webp',
             '/Website/Resources/Portfolio/3OFICINASADMAC/2-5OFICINASADMAC.webp',
@@ -45,6 +48,7 @@ const proyectos = {
         descripcion: 'Diseño de oficinas y mobiliario.'
     },
     4: {
+        nombre: 'Casa Habitación SO',
         imagenes: [
             '/Website/Resources/Portfolio/4CASAHABITACIONSO/1-7CASAHABSO.webp',
             '/Website/Resources/Portfolio/4CASAHABITACIONSO/2-7CASAHABSO.webp',
@@ -60,6 +64,7 @@ const proyectos = {
         descripcion: 'Diseño de casa habitación.'
     },
     5: {
+        nombre: 'Casa Habitación TS',
         imagenes: [
             '/Website/Resources/Portfolio/5CASAHABITACIONTS/1-3CASAHABTS.webp',
             '/Website/Resources/Portfolio/5CASAHABITACIONTS/2-3CASAHABTS.webp',
@@ -71,6 +76,7 @@ const proyectos = {
         descripcion: 'Diseño de casa habitación.'
     },
     6: {
+        nombre: 'Casa Habitación AG',
         imagenes: [
             '/Website/Resources/Portfolio/6CASAHABITACIONAG/1-7CASAHABAG.webp',
             '/Website/Resources/Portfolio/6CASAHABITACIONAG/2-7CASAHABAG.webp',
@@ -86,6 +92,7 @@ const proyectos = {
         descripcion: 'Diseño de casa habitación y terraza.'
     },
     7: {
+        nombre: 'Casa Habitación MS',
         imagenes: [
             '/Website/Resources/Portfolio/7CASAHABITACIONMS/1-3CASAHABMS.webp',
             '/Website/Resources/Portfolio/7CASAHABITACIONMS/2-3CASAHABMS.webp',
@@ -97,6 +104,7 @@ const proyectos = {
         descripcion: 'Diseño de casa habitación.'
     },
     8: {
+        nombre: 'Centro Comunitario Praderas',
         imagenes: [
             '/Website/Resources/Portfolio/8CENTROCOMUNITARIOPRADERAS/1-3CENTROCOMP.webp',
             '/Website/Resources/Portfolio/8CENTROCOMUNITARIOPRADERAS/2-3CENTROCOMP.webp',
@@ -108,6 +116,7 @@ const proyectos = {
         descripcion: 'Diseño de área social para eventos.'
     },
     9: {
+        nombre: 'Bodegas Comerciales ZJ',
         imagenes: [
             '/Website/Resources/Portfolio/9BODEGASCOMERCIALESZJ/1-6BODEGASCOMZJ.webp',
             '/Website/Resources/Portfolio/9BODEGASCOMERCIALESZJ/2-6BODEGASCOMZJ.webp',
@@ -122,6 +131,7 @@ const proyectos = {
         descripcion: 'Diseño de bodegas comerciales.'
     },
     10: {
+        nombre: 'Ferretería Materiales Jiménez',
         imagenes: [
             '/Website/Resources/Portfolio/10FERREMATERIALESJIMENEZ/1-5FERREMATERIALESJ.webp',
             '/Website/Resources/Portfolio/10FERREMATERIALESJIMENEZ/2-5FERREMATERIALESJ.webp',
@@ -135,6 +145,7 @@ const proyectos = {
         descripcion: 'Diseño de ferretería y bodega de materiales.'
     },
     11: {
+        nombre: 'Remodelación Casa Habitación JMT',
         imagenes: [
             '/Website/Resources/Portfolio/11REMODELACIONCASAHABITACIONJMT/1-5REMCASAHABJMT.webp',
             '/Website/Resources/Portfolio/11REMODELACIONCASAHABITACIONJMT/2-5REMCASAHABJMT.webp',
@@ -148,6 +159,7 @@ const proyectos = {
         descripcion: 'Remodelación de fachada, diseño de sala de lectura y área social.'
     },
     12: {
+        nombre: 'Remodelación Casa Habitación PS',
         imagenes: [
             '/Website/Resources/Portfolio/12REMODELACIONCASAHABITACIONPS/1-6REMCASAHABPS.webp',
             '/Website/Resources/Portfolio/12REMODELACIONCASAHABITACIONPS/2-6REMCASAHABPS.webp',
@@ -162,6 +174,7 @@ const proyectos = {
         descripcion: 'Remodelación de fachada y diseño de interior de casa habitación.'
     },
     13: {
+        nombre: 'Remodelación Fachada EH',
         imagenes: [
             '/Website/Resources/Portfolio/13REMODELACIONFACHADAEH/1-2REMFACHADAEH.webp',
             '/Website/Resources/Portfolio/13REMODELACIONFACHADAEH/2-2REMFACHADAEH.webp'],
@@ -172,6 +185,7 @@ const proyectos = {
         descripcion: 'Remodelación de fachada de casa habitación.'
     },
     14: {
+        nombre: 'Remodelación Fachada AR',
         imagenes: [
             '/Website/Resources/Portfolio/14REMODELACIONFACHADAAR/1-2REMFACHADAAR.webp',
             '/Website/Resources/Portfolio/14REMODELACIONFACHADAAR/2-2REMFACHADAAR.webp'],
@@ -182,6 +196,7 @@ const proyectos = {
         descripcion: 'Remodelación de fachada de casa habitación.'
     },
     15: {
+        nombre: 'Departamentos Henry',
         imagenes: [
             '/Website/Resources/Portfolio/15DEPARTAMENTOSHENRY/1-6DPTOSHENRY.webp',
             '/Website/Resources/Portfolio/15DEPARTAMENTOSHENRY/2-6DPTOSHENRY.webp',
@@ -195,6 +210,7 @@ const proyectos = {
         descripcion: 'Diseño, cálculo y modelado BIM de las instalaciones: hidráulica, sanitaria y pluvial para torre de departamentos.'
     },
     16: {
+        nombre: 'Nave Industrial Prisma VIII',
         imagenes: [
             '/Website/Resources/Portfolio/16NAVEINDSUTRIALPRISMAVIII/1-2IHPRISMAVIII.webp',
             '/Website/Resources/Portfolio/16NAVEINDSUTRIALPRISMAVIII/2-2ISPRISMAVIII.webp'],
@@ -205,6 +221,7 @@ const proyectos = {
         descripcion: 'Diseño y cálculo de las instalaciones: hidráulica y sanitaria.'
     },
     17: {
+        nombre: 'Nave Industrial Prisma IX',
         imagenes: [
             '/Website/Resources/Portfolio/17NAVEINDUSTRIALPRISMAIX/1-6IPPRISMAIX.webp',
             '/Website/Resources/Portfolio/17NAVEINDUSTRIALPRISMAIX/3-6PRISMAIX.webp',
@@ -219,6 +236,7 @@ const proyectos = {
         descripcion: 'Diseño y construcción de sistema pluvial.'
     },
     18: {
+        nombre: 'Nave Industrial Prisma X',
         imagenes: [
             '/Website/Resources/Portfolio/18NAVEINDUSTRIALPRISMAX/1-3IHPRISMAX.webp',
             '/Website/Resources/Portfolio/18NAVEINDUSTRIALPRISMAX/2-3ISPRISMAX.webp',
@@ -232,39 +250,51 @@ const proyectos = {
 };
 
 
-$(document).ready(function(){
-    $('.ver-detalles').on('click', function(){
-        const id = $(this).data('id');
+
+$(document).ready(function() {
+    // Redireccionar al hacer clic en el botón
+    $('.ver-detalles').on('click', function() {
+        const projectId = $(this).data('id'); // Obtener el ID del proyecto
+        window.location.href = `Sprojectsinfo.html?id=${projectId}`; // Redirigir con el ID
+    });
+
+    // Cargar la información del proyecto si estamos en Sprojectsinfo.html
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    if (id && proyectos[id]) {
         const proyecto = proyectos[id];
 
-        // Cargar imágenes en el carrusel
-        const $carousel = $('.carousel').empty();
-        proyecto.imagenes.forEach(img => {
-            $carousel.append(`<div><img src="${img}" loading="lazy" alt="Imagen"></div>`);
-        });
+        // Configurar el título del proyecto
+        $('#project-title').text(`Proyecto: ${proyecto.nombre}`);
 
-        // Inicializar carrusel
-        $carousel.slick({
-            autoplay: true,
-            autoplaySpeed: 3000, // Cambia de imagen cada 3 segundos
-            dots: true,
-            arrows: true,
-            prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-            nextArrow: '<button type="button" class="slick-next">Next</button>'
+        // Configurar el carrusel
+        const $carouselInner = $('#project-carousel .carousel-inner');
+        const $carouselIndicators = $('#project-carousel .carousel-indicators');
+        
+        proyecto.imagenes.forEach((img, index) => {
+            const activeClass = index === 0 ? 'active' : '';
+
+            // Crear el elemento de la imagen
+            $carouselInner.append(`
+                <div class="carousel-item ${activeClass}">
+                    <img src="${img}" class="d-block w-100" alt="Imagen del proyecto">
+                </div>
+            `);
+
+            // Crear el indicador
+            $carouselIndicators.append(`
+                <button type="button" data-bs-target="#project-carousel" data-bs-slide-to="${index}" class="${activeClass}" aria-label="Slide ${index + 1}"></button>
+            `);
         });
 
         // Cargar otros detalles
-        $('#Cliente').text(`Cliente: ${proyecto.cliente}`);
-        $('#Fecha').text(`Fecha: ${proyecto.anio}`);
-        $('#Ubicacion').text(`Ubicación: ${proyecto.ubicacion}`);
-        $('#Superficie').text(`Superficie: ${proyecto.superficie}`);
-        $('#Descripcion').text(`Descripción: ${proyecto.descripcion}`);
-
-        // Mostrar modal
-        $('#detallesModal').modal('show');
-    });
-
-    $('#detallesModal').on('hidden.bs.modal', function () {
-        $('.carousel').slick('unslick');
-    });
+        $('#cliente').text(`Cliente: ${proyecto.cliente}`);
+        $('#fecha').text(`Fecha: ${proyecto.anio}`);
+        $('#ubicacion').text(`Ubicación: ${proyecto.ubicacion}`);
+        $('#superficie').text(`Superficie: ${proyecto.superficie}`);
+        $('#descripcion').text(`Descripción: ${proyecto.descripcion}`);
+    } else {
+        console.error("Proyecto no encontrado");
+    }
 });
