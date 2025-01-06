@@ -1,65 +1,87 @@
-/* Ajustes generales para diseño responsivo */
+
+@font-face {
+    font-family: "Nav-Banner";
+    font-weight: bold;
+    src:url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Text';
+    src: url(/Website/fonts/Montserrat-VariableFont_wght.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Titles";
+    src: url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+    
+  }
+
 * {
     box-sizing: border-box;
 }
 
-/* Ajustes para la sección banner */
-.banner {
+.Banner{
+    position: relative;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.Banner h1{
+    letter-spacing: .1em;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+#BannerText{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 97%;
+}
+
+.MVV {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las secciones se acomoden en filas si es necesario */
+    justify-content: space-evenly; /* Distribuye el espacio de manera equitativa entre las secciones */
+    margin-top: 5%;
+    margin-bottom: 5%;
+  
+ 
+}
+
+.MVV .section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('/Website/Resources/AboutUs/NOSOTROS.webp');
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    
-}
-
-.banner h1 {
-    font-size: 3em;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin-bottom: 3%;
     text-align: center;
-    letter-spacing: 10px;
-}
-
-.bannerTxt p {
-    font-weight: bold;
-    padding: 5% 10%; /* Ajuste para un mejor espaciado */
-    font-family: "Text";
-    font-size: 1.45em;
-    text-align: justify;
-    color: white;
-}
-
-/* Ajustes para la sección MVV */
-.MVV {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 20px;
-    border-radius: 10px;
-    transition: 0.3s;
-    background-color: #f9f9f9; /* Fondo ligero para resaltar el texto */
+    margin-bottom: 20px;
+    width:40%; /* Aumenta el ancho de las secciones */
+    min-width: 500px; /* Asegura que las secciones no se reduzcan demasiado */
 }
 
 .MVV img {
-    width: 80px; /* Tamaño adecuado para la imagen */
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    max-width: 150px; /* Limita el tamaño máximo de la imagen */
     height: auto;
-    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
 }
 
 .MVV h1 {
-    font-size: 1.8em;
+    font-size: 2em; /* Aumenta el tamaño del título */
     font-weight: 700;
     color: #333;
     margin-bottom: 10px;
@@ -67,81 +89,31 @@
 
 .MVV p {
     font-family: "Text";
-    font-size: 1em;
-    font-weight: 500;
-    color: #666;
-    line-height: 1.5;
-    padding: 0 15px; /* Espaciado interno para mejor legibilidad */
+    font-size: 1.2em; /* Aumenta el tamaño del texto */
+    font-weight: 800;
+    line-height: 1.6;
+    padding: 0 15px;
+    text-align: justify;
     max-width: 300px; /* Limita el ancho del texto */
-    text-align: center;
 }
 
-/* Media queries para hacer la página responsiva */
-
-/* Pantallas grandes */
-@media (min-width: 1024px) {
-    .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .col-6, .col-3 {
-        width: 30%; /* Ajusta el ancho de columnas en pantallas grandes */
-    }
-}
-
-/* Pantallas de tamaño medio (tabletas) */
-@media (max-width: 1023px) and (min-width: 768px) {
-    .banner h1 {
-        font-size: 2.5em;
-    }
-    .bannerTxt p, .MVV p {
-        font-size: 1.2em;
-        line-height: 1.4;
-    }
-    .MVV img {
-        width: 50%; /* Reduce el tamaño de imagen en tabletas */
-    }
-}
-
-/* Pantallas móviles */
-@media (max-width: 767px) {
-    .row {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    .MVV {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px;
     }
 
-    .col-6, .col-3, .col-4 {
-        width: 100%; /* Ocupa el ancho completo en móviles */
-        text-align: center; /* Centra el contenido en columnas */
-    }
-
-    .banner h1 {
-        font-size: 2em;
-        letter-spacing: 5px;
-    }
-
-    .bannerTxt p {
-        font-size: 1em;
+    .MVV .section {
+        width: 100%; /* Las secciones ocupan todo el ancho en pantallas pequeñas */
     }
 
     .MVV h1 {
-        font-size: 2em;
+        font-size: 1.5em; /* Ajusta el tamaño del título en pantallas pequeñas */
     }
 
     .MVV p {
-        font-weight: 600;
-        font-size: 1em;
-        padding: 0 10px; /* Aumenta el padding lateral para mejor legibilidad */
-    }
-
-    #linetxt {
-        display: none; /* Oculta la línea vertical en pantallas pequeñas */
-    }
-
-    .MVV img {
-        width: 60%; /* Ajusta el tamaño de las imágenes */
-        padding: 5%; /* Añade un poco de espaciado */
+        font-size: 1em; /* Ajusta el tamaño del texto en pantallas pequeñas */
     }
 }

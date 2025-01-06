@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "Nav-Banner";
+    font-weight: bold;
+    src:url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Text';
+    src: url(/Website/fonts/Montserrat-VariableFont_wght.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Titles";
+    src: url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+    
+  }
 /* Estilos generales */
 body {
     background-color: #f8f9fa;
@@ -7,26 +24,30 @@ body {
 }
 
 /* Contenedor principal */
-.container {
+#info{
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    max-width: 1200px;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
 }
 
 /* Carrusel de imágenes */
 #project-carousel {
-    flex: 1 1 50%; /* Ocupa la mitad del ancho en pantallas grandes, pero ajustable */
     margin-right: 20px;
     max-width: 600px; /* Ancho máximo del carrusel */
+    height: 600px; /* Altura fija del carrusel */
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+    position: relative; /* Para posicionar los controles del carrusel */
+}
+
+.carousel-item {
+    height: 100%; /* Asegura que los elementos del carrusel llenen el contenedor */
 }
 
 .carousel-item img {
     width: 100%;
-    height: auto; /* Ajusta la altura en relación al ancho */
-    max-height: 600px; /* Limita la altura para evitar imágenes demasiado altas */
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
     border-radius: 10px; /* Bordes redondeados para la imagen */
 }
 
@@ -79,14 +100,19 @@ body {
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    .container {
+    .project-container {
         flex-direction: column;
-        align-items: center; /* Centra los elementos en pantallas pequeñas */
+        align-items: center;
     }
-    
+
     #project-carousel, .project-info {
         margin-right: 0;
-        margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+    }
+    #project-carousel, .carousel-item img {
+        width: 100%;
+        height: auto;
     }
 
     #project-title {

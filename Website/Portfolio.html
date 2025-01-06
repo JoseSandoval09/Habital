@@ -3,23 +3,59 @@
 <head>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    
-    <!-- Icono de Favicon -->
-   <link rel="shortcut icon" href="/Habital/Website/Resources/Footer2.png" type="image/x-icon">
-    
-   <!-- CSS Internos y externos -->
+    <title>Proyectos</title>
+    <meta name="description" content="Explora nuestro portafolio arquitectónico con una galería de proyectos destacados. Descubre soluciones innovadoras en diseño, ingeniería y construcción adaptadas a tus necesidades.">
    <link rel="stylesheet" href="CSS/Fonts.css">
    <link rel="stylesheet" href="CSS/Portfolio.css">
-   
-   <!-- Carga de Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-   <!-- Carga de jQuery -->
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-   <!-- Carga de Bootstrap JS -->
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+   <script src="/Website/projectsInfo.js" defer></script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Selecciona el contenedor donde se cargará la navbar
+      const navbarContainer = document.getElementById('navbar-container');
+      
+      // Verifica si el contenedor existe para evitar errores
+      if (navbarContainer) {
+      // Utiliza fetch para cargar el contenido de navbar.html
+      fetch('Navb.html')
+        .then(response => response.text())
+        .then(data => {
+        // Inserta el contenido de navbar.html en el contenedor
+        navbarContainer.innerHTML = data;
+        })
+        .catch(error => {
+        // Maneja errores, por ejemplo, si navbar.html no se encuentra
+        console.error('Error loading the navbar:', error);
+        });
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Selecciona el contenedor donde se cargará el footer
+      const footerContainer = document.getElementById('footer-container');
+    
+      // Verifica si el contenedor existe para evitar errores
+      if (footerContainer) {
+      // Utiliza fetch para cargar el contenido de footer.html
+      fetch('Footer.html')
+        .then(response => response.text())
+        .then(data => {
+        // Inserta el contenido de footer.html en el contenedor
+        footerContainer.innerHTML = data;
+        })
+        .catch(error => {
+        // Maneja errores, por ejemplo, si footer.html no se encuentra
+        console.error('Error loading the footer:', error);
+        });
+      }
+    });
+    
+    
+    
+  </script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
     
 
    
@@ -31,125 +67,119 @@
     <div class="portfolio-grid">
         
         <div class="project" data-proyect="1">
-            <img src="/Website/Resources/Portfolio/1DEPARTAMENTOSCAMPOS/4-10DPTOSCAMPOS.webp" alt="Proyecto 1">
+            <img src="/Website/Resources/Portfolio/1DEPARTAMENTOSCAMPOS/4-10DPTOSCAMPOS.webp" alt="Proyecto 1" >
             <h1>Departamentos CAMPOS</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="1" > Ver Detalles del proyecto</button> 
+            <button onclick="window.location.href='Sprojectsinfo.html?id=1'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="2">
             <img src="/Website/Resources/Portfolio/2DEPARTAMENTOSCASCADA/3-3DPTOSCASCADA.webp" alt="Proyecto 2">
             <h1>Departamentos CASCADA</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="2" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=2'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="3">
             <img src="/Website/Resources/Portfolio/3OFICINASADMAC/5-5OFICINASADMAC.webp" alt="Proyecto 3">
             <h1>Oficinas ADMAC</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="3" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=3'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="4">
-            <img src="/Website/Resources/Portfolio/4CASAHABITACIONSO/4-7CASAHABSO.webp" alt="Proyecto 4">
+            <img src="/Website/Resources/Portfolio/4CASAHABITACIONSO/4-7CASAHABSO.webp" alt="Proyecto 4" loading="lazy">
             <h1>Casa HABITACION SO</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="4" > Ver Detalles del proyecto</button> 
+            <button onclick="window.location.href='Sprojectsinfo.html?id=4'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="5">
-            <img src="/Website/Resources/Portfolio/5CASAHABITACIONTS/1-3CASAHABTS.webp" alt="Proyecto 5">
+            <img src="/Website/Resources/Portfolio/5CASAHABITACIONTS/1-3CASAHABTS.webp" alt="Proyecto 5" loading="lazy">
             <h1>Casa HABITACION TS</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="5" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=5'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="6">
-            <img src="/Website/Resources/Portfolio/6CASAHABITACIONAG/3-7CASAHABAG.webp" alt="Proyecto 6">
+            <img src="/Website/Resources/Portfolio/6CASAHABITACIONAG/3-7CASAHABAG.webp" alt="Proyecto 6" loading="lazy">
             <h1>Casa HABITACION AG</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="6" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=6'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="7">
-            <img src="/Website/Resources/Portfolio/7CASAHABITACIONMS/1-3CASAHABMS.webp" alt="Proyecto 7">
+            <img src="/Website/Resources/Portfolio/7CASAHABITACIONMS/1-3CASAHABMS.webp" alt="Proyecto " loading="lazy">
             <h1>Casa HABITACION MS</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="7" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=7'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="8">
-            <img src="/Website/Resources/Portfolio/8CENTROCOMUNITARIOPRADERAS/2-3CENTROCOMP.webp" alt="Proyecto 8">
+            <img src="/Website/Resources/Portfolio/8CENTROCOMUNITARIOPRADERAS/2-3CENTROCOMP.webp" alt="Proyecto 8" loading="lazy">
             <h1>Centro comunitario PRADERAS</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="8" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=8'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="9">
-            <img src="/Website/Resources/Portfolio/9BODEGASCOMERCIALESZJ/5-6BODEGASCOMZJ.webp" alt="Proyecto 9">
+            <img src="/Website/Resources/Portfolio/9BODEGASCOMERCIALESZJ/5-6BODEGASCOMZJ.webp" alt="Proyecto 9" loading="lazy">
             <h1>Bodegas comerciales ZJ</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="9" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=9'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="10">
-            <img src="/Website/Resources/Portfolio/10FERREMATERIALESJIMENEZ/5-5FERREMATERIALESJ.webp" alt="Proyecto 10">
+            <img src="/Website/Resources/Portfolio/10FERREMATERIALESJIMENEZ/5-5FERREMATERIALESJ.webp" alt="Proyecto 10" loading="lazy">
             <h1>FERREMATERIALES JIMENEZ</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="10" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=10'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="11">
-            <img src="/Website/Resources/Portfolio/11REMODELACIONCASAHABITACIONJMT/3-5REMCASAHABJMT.webp" alt="Proyecto 11">
+            <img src="/Website/Resources/Portfolio/11REMODELACIONCASAHABITACIONJMT/3-5REMCASAHABJMT.webp" alt="Proyecto 11" loading="lazy">
             <h1>Remodelacion Casa Habitacion JMT</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="11" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=11'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="12">
-            <img src="/Website/Resources/Portfolio/12REMODELACIONCASAHABITACIONPS/6-6REMCASAHAB.webp" alt="Proyecto 12">
+            <img src="/Website/Resources/Portfolio/12REMODELACIONCASAHABITACIONPS/6-6REMCASAHAB.webp" alt="Proyecto 12" loading="lazy">
             <h1>Remodelacion Casa Habitacion PS</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="12" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=12'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="13">
-            <img src="/Website/Resources/Portfolio/13REMODELACIONFACHADAEH/2-2REMFACHADAEH.webp" alt="Proyecto 13">
+            <img src="/Website/Resources/Portfolio/13REMODELACIONFACHADAEH/2-2REMFACHADAEH.webp" alt="Proyecto 13" loading="lazy">
             <h1>Remodelacion Fachada EH</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="13" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=13'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="14">
-            <img src="/Website/Resources/Portfolio/14REMODELACIONFACHADAAR/2-2REMFACHADAAR.webp" alt="Proyecto 14">
+            <img src="/Website/Resources/Portfolio/14REMODELACIONFACHADAAR/2-2REMFACHADAAR.webp" alt="Proyecto 14" loading="lazy">
             <h1>Remodelacion Fachada AR</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="14" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=14'">Ver detalles</button>
         </div>
 
         
         <div class="project" data-proyect="15">
-             <img src="/Website/Resources/Portfolio/15DEPARTAMENTOSHENRY/3-6DPTOSHENRY.webp" alt="Proyecto 15">
+             <img src="/Website/Resources/Portfolio/15DEPARTAMENTOSHENRY/3-6DPTOSHENRY.webp" alt="Proyecto 15" loading="lazy">
             <h1>Departamentos HENRY</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="15" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=15'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="16">
-            <img src="/Website/Resources/Portfolio/16NAVEINDSUTRIALPRISMAVIII/2-2ISPRISMAVIII.webp" alt="Proyecto 16">
+            <img src="/Website/Resources/Portfolio/16NAVEINDSUTRIALPRISMAVIII/2-2ISPRISMAVIII.webp" alt="Proyecto 16" loading="lazy">
             <h1>Nave Industrial PRISMA VIII</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="16" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=16'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="17">
-            <img src="/Website/Resources/Portfolio/17NAVEINDUSTRIALPRISMAIX/1-6IPPRISMAIX.webp" alt="Proyecto 17">
+            <img src="/Website/Resources/Portfolio/17NAVEINDUSTRIALPRISMAIX/1-6IPPRISMAIX.webp" alt="Proyecto 17" loading="lazy">
             <h1>Nave Industrial PRISMA IX</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="17" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=17'">Ver detalles</button>
         </div>
 
         <div class="project" data-proyect="18">
-            <img src="/Website/Resources/Portfolio/18NAVEINDUSTRIALPRISMAX/3-3IPPRISMAX.webp" alt="Proyecto 18">
+            <img src="/Website/Resources/Portfolio/18NAVEINDUSTRIALPRISMAX/3-3IPPRISMAX.webp" alt="Proyecto 18" loading="lazy">
             <h1>Nave Industrial Prisma X</h1>
-            <button type="button" class="ver-detalles btn-primary" data-bs-toggle="modal" data-bs-target="#detallesModal" data-id="18" > Ver Detalles del proyecto</button>
+            <button onclick="window.location.href='Sprojectsinfo.html?id=18'">Ver detalles</button>
         </div>
 
-    </div>
+    </div
 
-  
 
-    <!-- Scripts locales también con defer para ejecutarse al final -->
-    <script src="/Website/projectsInfo.js" defer></script>
-    <script src="/Website/loadNavb.js" defer></script>
-    <script src="/Website/loadFooter.js" defer></script>
-
-    <footer id="footer-container"></footer>
-    
+    <!-- Footer -->
+    <div id="footer-container"></div>
     
 </body>
 </html>

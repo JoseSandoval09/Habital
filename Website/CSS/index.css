@@ -1,0 +1,282 @@
+body{
+    font-family: "Text",sans-serif;
+    padding: 0%;
+}
+h1,h2,h3{
+    font-family: "Titles",sans-serif;
+}
+p  {
+    font-family: "Text",sans-serif;
+}
+
+.Banner{
+    position: relative;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 95.99px);
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.Banner h1{
+    letter-spacing: .1em;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-size: 5rem;
+    font-weight: 700;
+}
+#BannerText{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 97%;
+}
+.Nosotros{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    height: 700px;
+    width: 100%;
+    z-index: 1;
+
+}
+#NosotrosTitle{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+
+}
+#NosotrosTitle h3{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+
+}
+#NosotrosTitle h3::after{
+    content: "";
+    width: 8em;
+    height: 5px;
+    background-color:black;
+    position: relative;
+    display: block;
+}
+#NosotrosText{
+    margin-top: 2em;
+    background-color: #214855;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    padding: 0%;;
+    justify-content: center;
+}
+
+#NosotrosText p{
+    font-size: 1.5rem;
+    text-align: justify;
+    color: white;
+    padding-left: 3em;
+    font-weight: 800;
+}
+.Nosotros img{
+    width: 110%;
+    height: 100%;
+    z-index: 2;
+    position: relative;;
+    left: 20%;
+}
+#ServiciosTitle{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+}
+#ServiciosTitle h3{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+}
+#ServiciosTitle h3::after{
+    content: "";
+    width: 8em;
+    height: 5px;
+    background-color:black;
+    position: relative;
+    display: block;
+}
+/* Estilo general */
+.Servicios h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.Tarjetas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+/* Estilo para las "tarjetas" */
+.tarjeta {
+    background-color: #0f3631 ;/* Color de fondo para todas las tarjetas */
+    border-radius: 10px;
+    padding: 3em;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+}
+.tarjeta img {
+    width: 7em;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.tarjeta ul {
+    font-weight: 600;;
+    padding: 0;
+    margin: 0;
+}
+
+.tarjeta ul li {
+    font-family: "Text",sans-serif;
+    margin-bottom: 0.5rem;
+    font-size: 1.1em;
+}
+.Por-que{
+    display: flex;
+    flex-direction: column;;
+    display: flex;
+    height: 700px;
+    width: 100%;
+    z-index: 1;
+}
+.Por-que h2{
+    text-align: center;
+    font-size: 4em;
+    font-weight: 700;
+}
+.Por-que p{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-left: 6em;
+    padding-right: 6em;
+    text-align: justify;
+    color: b;
+}
+.Por-que img{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    left: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    /* Ajustar el banner */
+    .Banner {
+        height: 50vh; /* Ajustar la altura */
+        aspect-ratio: unset; /* Eliminar la relación de aspecto fija */
+    }
+    .Banner h1 {
+        font-size: 2em; /* Reducir el tamaño del texto */
+    }
+    
+    /* Ajustar la sección "Sobre Nosotros" */
+    #NosotrosText {
+        flex-direction: column; /* Cambiar a columna */
+        width: 100%;
+        align-items: start;
+    }
+    #NosotrosText .col-lg-6 {
+        width: 100%; /* Asegurar que cada columna ocupe todo el ancho */
+        flex-direction: column; /* Cambiar a columna */
+        margin: 0%;
+    }
+    #NosotrosText p {
+        padding: 40px;
+      font-size: 1.2em;;
+    }
+    #NosotrosText button{
+        height: 70px;
+        width: 200px;
+        align-self: center;
+    }
+    #NosotrosText img {
+        display: none;
+    }
+
+    /* Ajustar la sección "Nuestros Servicios" */
+    .Tarjetas .col-lg-3 {
+        padding-left: 10%;
+        width: 90%; /* Cada tarjeta ocupa todo el ancho */
+    }
+    .tarjeta {
+        margin-bottom: 1em; /* Añadir espacio entre tarjetas */
+    }
+
+    /* Ajustar la sección "¿Por qué elegirnos?" */
+
+    .Por-que{
+        display: flex;
+        flex-direction: column;
+        display: flex;
+        height: 500px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .Por-que img {
+        display: none;
+    }
+    .Por-que h2 {
+        font-size: 2rem; /* Reducir tamaño del texto */
+    }
+    .Por-que .col-lg-6 {
+        margin-top: -100px;
+        flex-direction: column;
+        width: 100%; /* Asegurar que cada columna ocupe todo el ancho */
+    }
+    .Por-que p {
+        padding: 20px;
+        font-size: 1em; /* Reducir tamaño del texto */
+    }
+
+    /* Ajustar títulos */
+    #NosotrosTitle h3,
+    #ServiciosTitle h3 {
+        font-size: 2.5rem; /* Reducir tamaño de los títulos */
+    }
+
+    /* Reducir márgenes generales */
+    body {
+        padding: 0 1em; /* Espacio en los lados */
+    }
+}

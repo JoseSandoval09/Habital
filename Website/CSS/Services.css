@@ -1,170 +1,120 @@
-h1{
-    font-family: "Titles";
-}	
-p{
-    font-family: "Text";
-    font-size: 1.2em;
-    font-weight: 700;
+@font-face {
+  font-family: "Nav-Banner";
+  font-weight: bold;
+  src:url(/Website/fonts/LeagueSpartan-Regular.woff);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Text';
+  src: url(/Website/fonts/Montserrat-VariableFont_wght.woff);
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titles";
+  src: url(/Website/fonts/LeagueSpartan-Regular.woff);
+  font-display: swap;
+  
 }
 
-
-.disPro{
+.services {
+    padding: 30px 20px;
+    text-align: center;
+  
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 50px;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .service-item {
     display: flex;
-    justify-content: center;
+    flex-direction: row; /* Asegura que la imagen esté a la izquierda y el texto a la derecha */
     align-items: center;
-    flex-direction: column;
-    margin-top: 2%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 10px;
-    transition: 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-image {
+    width: 400px; 
+    height: 300px;
+    overflow: hidden;
+  
+
+  }
+  
+  .service-image img {
+    display: block;
+   width: 100%;
+   height: 100%;
+    object-fit: cover;
+  }
+  
+  .service-text {
+    width: 60%; /* El texto ocupa el 60% del espacio */
+    padding: 20px;
+    text-align: left; /* Alineación del texto a la izquierda */
+  }
+  
+  .service-text h3 {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .service-text p {
     text-align: justify;
-}
-.disPro h1{
-    font-size: 4em;
-    font-weight: 800;
-    color:#61390a;
-    margin-bottom: 3%;
-}
-.disPro h3{
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 3%;
-    text-align: center;
-}
-.col-lg-3{
-    padding-bottom: 5%;
-}
-.imgDis{
-    display: flex;
-    align-items: center;
-    object-fit: contain;  
-    width: 250px;
-    height: 250px;
-    border-radius:50%;
-    border-color: #000;
-}
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+  }
 
-.disIng{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 10px;
-    transition: 0.3s;
-    text-align: justify
-    
-}
-.disIng h1{
-    font-size: 4em;
-    font-weight: 800;
-    color: #000;
-    margin-bottom: 3%;
-
-}
-.disIng h3{
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 3%;
-    text-align: center;
-}
-
-.disCon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 10px;
-    transition: 0.3s;
-    text-align: justify;
-}
-.disCon h1{
-    font-size: 4em;
-    font-weight: 800;
-    color: #000;
-    margin-bottom: 3%;
-}
-.disCon h3{
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 3%;
-    text-align: center;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .disPro{
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 100%;
-        padding-left: 1%;
-        padding-right: 1%;
-        
+  #Inge .service-item{
+    background-color: #4A7B9D;
+  }
+  #Inge .service-text h3{
+    color: white;
+  }
+  #Inge .service-text p{
+    color: white;
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .service-grid {
+      grid-template-columns: 1fr; /* Solo una columna en pantallas pequeñas */
     }
-    .disPro h1{
-        text-align: center;
-        font-size: 4em;
+  
+    .service-item {
+      flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
     }
-    .disPro h3{
-        text-align: center;
-        font-size: 2em;
+  
+    .service-image {
+      width: 100%; /* La imagen ocupa todo el ancho en móviles */
+      height: 200px;
     }
-    .disPro p{
-        font-size: 1em;
+  
+    .service-text {
+      width: 100%;
     }
-    .disIng{
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 100%;
-        padding-left: 1%;
-        padding-right: 1%;
-        
-    }
-    .disIng h1{
-        text-align: center;
-        font-size: 4em;
-    }
-    .disIng h3{
-        text-align: center;
-        font-size: 2em;
-    }
-    .disIng p{
-        font-size: 1em;
-    }
-
-    .disCon{
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        width: 100%;
-        padding-left: 1%;
-        padding-right: 1%;
-        
-    }
-    .disCon h1{
-        text-align: center;
-        font-size: 4em;
-    }
-    .disCon h3{
-        text-align: center;
-        font-size: 2em;
-    }
-    .disCon p{
-        font-size: 1em;
-    }
-    
-}
+  }
+  

@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "Nav-Banner";
+    font-weight: bold;
+    src:url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Text';
+    src: url(/Website/fonts/Montserrat-VariableFont_wght.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Titles";
+    src: url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+    
+  }
+
 /* Grid general */
 .portfolio-grid {
     display: grid;
@@ -17,6 +35,7 @@
     background-color: #fff;
     transition: transform 0.2s ease-in-out;
     min-height: 300px; /* Altura mínima de la card */
+    overflow: hidden;
 }
 
 .project:hover {
@@ -26,9 +45,8 @@
 /* Estilos de la imagen */
 .project img {
     width: 100%;
-    height:500px;
-    display: block;
-    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+    height: 500px; /* Altura de la imagen */
+  object-fit: cover;
 }
 
 /* Estilos del título */

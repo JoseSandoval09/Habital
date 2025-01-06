@@ -1,4 +1,21 @@
-/* Estilos generales */
+@font-face {
+    font-family: "Nav-Banner";
+    font-weight: bold;
+    src:url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Text';
+    src: url(/Website/fonts/Montserrat-VariableFont_wght.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Titles";
+    src: url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+    
+  }
+
 body {
     margin: 0;
     padding: 0;
@@ -11,115 +28,74 @@ ul {
     list-style: none;
 }
 
-
-
 .dividerfooter {
     width: 100%;
-    color: #CCCCCC;
-    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #0A1818;
+    background-color: #0f3631;
+    padding: 20px 10px;
 }
 
 .sidemap, .Contacto, .image {
     flex: 1;
-    margin: 10px;
-}
-
-.sidemap h1 {
-    font-family: 'Titles';
-    font-weight: 700;
-    letter-spacing: 3px;
-    font-size: 3em;
-}
-
-.sidemap h1::after {
-    content: "";
-    width: 150px;
-    height: 5px;
-    background-color: #7FBF9F;
-    border-radius: 10px;
-    display: block;
-    margin: auto;
-}
-
-.sidemap {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.sidemap li {
-    margin: 10px 0;
-}
-
-.sidemap ul li a {
-    font-family: "Text";
-    font-size: 1.5em;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    text-decoration: none;
-    color: #CCCCCC;
+    margin: 0 10px;
     text-align: center;
 }
 
-.sidemap ul li a:hover {
-    color: white;
-    padding-left: 10px;
-}
-
-.image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image img {
-    width: 100%;
-    height: auto;
-}
-
-.Contacto {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.Contacto h1 {
+.sidemap h1, .Contacto h1 {
     font-family: 'Titles';
     font-weight: 700;
-    letter-spacing: 3px;
-    font-size: 3em;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-.Contacto h1::after {
+.sidemap h1::after, .Contacto h1::after {
     content: "";
-    width: 150px;
-    height: 5px;
+    width: 100px;
+    height: 3px;
     background-color: #7FBF9F;
-    border-radius: 10px;
-    display: block;
+    border-radius: 5px;
     margin: auto;
 }
 
-.Contacto li {
-    float: left;
+.sidemap ul li a, .Contacto li a {
+    font-family: "Text";
+    font-size: 1.5em;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    margin: 5px 0;
+}
+
+.sidemap ul li a:hover, .Contacto li a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.sidemap {
+    display: block;
+}
+
+.image img {
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.Contacto ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .Contacto li a {
-    text-decoration: none;
-    font-size: 2em;
-    margin-right: 20px;
-    color: #CCCCCC;
+    font-size: 3em;
+    margin: 0 10px;
 }
 
 .Contacto li a:hover {
@@ -128,59 +104,45 @@ ul {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    footer {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        height: auto;
-    }
-
-    .sidemap h1, .Contacto h1 {
-        font-size: 2em;
-    }
-
-    .sidemap ul li a, .Contacto li a {
-        display: flex;
-        justify-content: center;
-        padding: 2px;
-        font-size: 1.5em;
-    }
-
-    .divider {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .image img {
-        width: 350px;
-        height: fit-content;
-    }
-
     .dividerfooter {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .sidemap, .Contacto, .image {
-        margin: 10px 0;
         width: 100%;
+        margin-bottom: 20px;
     }
 
-    .sidemap h1 {
-        font-size: 2em;
+    .sidemap h1, .Contacto h1 {
+        font-size: 1.6em;
+    }
+
+    .sidemap ul li a, .Contacto li a {
+        font-size: 1.2em;
+    }
+
+    .image img {
+        width: 120px;
+        margin: 15px auto;
     }
 }
 
 @media (max-width: 480px) {
-    .sidemap h1 {
-      
-        margin-top: 1em;
-        font-size: 1.5em;
-    }
-    .sidemap, .Contacto, .image {
-        text-align: center;
+    
+
+    .sidemap ul li a, .Contacto li a {
+        font-size: 1.2em;
     }
 
-   
+    .image  {
+        margin:0 auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+    }
 }

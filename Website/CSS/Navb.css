@@ -1,21 +1,35 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Nav-Banner', sans-serif;;
+}
+.container {
+    position:sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
 }
 
 .navbar {
     background-color: #0f3631;
 }
+a{
+    font-weight: 700;
+}
 
 .navbar-brand img {
-    max-width: 100%;
-    height: auto;
+    position: relative;
+    display: flex;
+    height: 100px;;
+    width:100%;;
+    padding: 0%;
 }
 
 .nav-link {
     color: #FFFFFF !important;
     padding: 10px 20px;
+    
 }
 
 .navbar-toggler {
@@ -33,19 +47,3 @@ body {
     height: 100%;
 }
 
-/* Media queries para pantallas pequeñas */
-@media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .nav-link {
-        padding: 10px 0;
-    }
-
-    .col-lg-6 {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-}

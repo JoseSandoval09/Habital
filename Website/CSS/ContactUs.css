@@ -1,3 +1,22 @@
+@font-face {
+    font-family: "Nav-Banner";
+    font-weight: bold;
+    src:url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Text';
+    src: url(/Website/fonts/Montserrat-VariableFont_wght.woff);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Titles";
+    src: url(/Website/fonts/LeagueSpartan-Regular.woff);
+    font-display: swap;
+    
+  }
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;

@@ -10,8 +10,6 @@ const proyectos = {
             '/Website/Resources/Portfolio/1DEPARTAMENTOSCAMPOS/6-10DPTOSCAMPOS.webp',
             '/Website/Resources/Portfolio/1DEPARTAMENTOSCAMPOS/7-10DPTOSCAMPOS.webp',
             '/Website/Resources/Portfolio/1DEPARTAMENTOSCAMPOS/8-10DPTOS CAMPOS.webp',
-            '/Website/Resources/Portfolio/1DEPARTAMENTOSCAMPOS/9-10DPTOS CAMPOS.webp',
-            '/Website/Resources/Portfolio/1DEPARTAMENTOSCAMPOS/10DPTOS CAMPOS.webp'
         ],
         cliente: 'Particular',
         anio: '2023 - Presente',
@@ -266,7 +264,7 @@ $(document).ready(function() {
         const proyecto = proyectos[id];
 
         // Configurar el título del proyecto
-        $('#project-title').text(`Proyecto: ${proyecto.nombre}`);
+        $('#project-title').text(` ${proyecto.nombre}`);
 
         // Configurar el carrusel
         const $carouselInner = $('#project-carousel .carousel-inner');
